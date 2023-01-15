@@ -1,0 +1,1412 @@
+{
+  "active": false,
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "THALLYS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Baserow1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Baserow3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Baserow4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons 1": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons 2": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Baserow2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Baserow5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "Baserow6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons1": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons ": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons 3": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CAMILA": {
+      "main": [
+        [
+          {
+            "node": "Array de Cupons1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Array de Cupons ",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Array de Cupons 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "THALLYS": {
+      "main": [
+        [
+          {
+            "node": "Array de Cupons",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Array de Cupons 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Array de Cupons 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request6": {
+      "main": [
+        [
+          {
+            "node": "Baserow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons6": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request7": {
+      "main": [
+        [
+          {
+            "node": "Baserow7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons7": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request8": {
+      "main": [
+        [
+          {
+            "node": "Baserow8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista de cupons8": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons2": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons 4": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Array de Cupons 5": {
+      "main": [
+        [
+          {
+            "node": "Lista de cupons8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WALESKA": {
+      "main": [
+        [
+          {
+            "node": "Array de Cupons2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Array de Cupons 4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Array de Cupons 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow8": {
+      "main": [
+        [
+          {
+            "node": "Baserow9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow9": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-01T03:20:00.787Z",
+  "id": "1",
+  "name": "COMISSÃO",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "06fe01bc-1297-44d2-b994-0fdec483d691",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagem/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}?skipCache=true",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "973feecfab2bdbc1583e2074133810dded1cd87f"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_nztAmyKqsvtHS2PQlcwoqmP66TaSC3m0ECfS1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "16eaa4f2-bd35-499b-9da8-d60e8f27258d",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1460,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        360
+      ],
+      "id": "7b327769-d25a-4ab8-842d-c0acb9e2d620"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "1",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754222,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "28d988f3-a82f-4627-9dfa-e37fcbe25311",
+      "name": "Baserow1",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        360
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/cleanskinbr2/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "5c2ecac51e4cff9986ca049da482bb6d92838969"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_9mMlLRynS02sZKA9geK4QfaRriJSZJPOv0diG"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2a3ea295-839b-4f3c-a7d2-b898d5ccc666",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1460,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        600
+      ],
+      "id": "6b41aef9-8a0e-42dc-8066-bfc486e93440"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "1",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754223,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "8d392fba-153e-4633-9009-432541f56a92",
+      "name": "Baserow3",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        600
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagemoficial/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "0f68089b850eaa85ca328293f21897a611d2f7f9"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_GMRHBdr89JQxT7XyTgwCoK4Yn5qWH0aBA1HqT"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8e5a62ee-b659-43c9-b9bf-54fa2cc8c86a",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1460,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons2",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        860
+      ],
+      "id": "4be91b79-da8c-47c8-8383-ecee66f37c0b"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "1",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754224,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "61ddf5ac-bf1b-47d0-b1f4-185e453dcbd2",
+      "name": "Baserow4",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        860
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ROSA SELVAGEM BRASIL",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        920,
+        360
+      ],
+      "id": "b7bd455e-321f-490a-9850-f50b36faf702"
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ROSA SELVAGEM ÁCIDO",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons 1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        920,
+        600
+      ],
+      "id": "c323fb60-2819-4b11-ac4e-283d73988c36"
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ECOMMERCE",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons 2",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        920,
+        860
+      ],
+      "id": "14e8c887-9415-4348-9d4a-0eaca0169643"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagem/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "973feecfab2bdbc1583e2074133810dded1cd87f"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_nztAmyKqsvtHS2PQlcwoqmP66TaSC3m0ECfS1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d605e680-9944-4734-8916-e1c9c2126539",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1440,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons3",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1200
+      ],
+      "id": "444c7bc3-3a9f-4747-b1de-a22b3c9b5ab0"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "2",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754222,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "d50cd3c9-0bc0-4e61-a71e-1aab19ef3104",
+      "name": "Baserow2",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        1200
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/cleanskinbr2/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "5c2ecac51e4cff9986ca049da482bb6d92838969"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_9mMlLRynS02sZKA9geK4QfaRriJSZJPOv0diG"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3edf4d8d-a5cb-4939-b221-125a6010da4f",
+      "name": "HTTP Request4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1440,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons4",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1440
+      ],
+      "id": "c26837dc-5a42-4dc8-b1be-37c8a4f06e71"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "2",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754223,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "86be208b-17ac-43ec-8766-2e572e1f4dbe",
+      "name": "Baserow5",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        1440
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagemoficial/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "0f68089b850eaa85ca328293f21897a611d2f7f9"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_GMRHBdr89JQxT7XyTgwCoK4Yn5qWH0aBA1HqT"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "98de0462-1d0e-4ea7-9a78-19d7b17a38e1",
+      "name": "HTTP Request5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1440,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons5",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1700
+      ],
+      "id": "f063f8bb-51c1-44aa-b4bb-3b3967853f26"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "2",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754224,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "90d5c1fb-8dcf-4964-a08d-360be6248422",
+      "name": "Baserow6",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        1700
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ROSA SELVAGEM BRASIL",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        900,
+        1200
+      ],
+      "id": "cc81abf1-68d9-4670-bd21-aef9058e6796"
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ROSA SELVAGEM ÁCIDO",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons ",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        900,
+        1440
+      ],
+      "id": "fda2ef67-77b0-495a-baee-9ba70ae50883"
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ECOMMERCE",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons 3",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        900,
+        1700
+      ],
+      "id": "1850c748-2488-49f7-bb31-3a09bfd6c758"
+    },
+    {
+      "parameters": {
+        "databaseId": 46836,
+        "tableId": 118237,
+        "returnAll": true,
+        "additionalOptions": {
+          "filters": {
+            "fields": [
+              {
+                "field": 753157,
+                "value": "CAMILA"
+              }
+            ]
+          }
+        }
+      },
+      "id": "861900a4-5077-4613-9506-75158cfab2b1",
+      "name": "CAMILA",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        540,
+        1460
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "databaseId": 46836,
+        "tableId": 118237,
+        "returnAll": true,
+        "additionalOptions": {
+          "filters": {
+            "fields": [
+              {
+                "field": 753157,
+                "value": "THALLYS"
+              }
+            ]
+          }
+        }
+      },
+      "id": "63ef4ca0-327c-4844-840b-81bcb7a60ee8",
+      "name": "THALLYS",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        580,
+        600
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagem/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "973feecfab2bdbc1583e2074133810dded1cd87f"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_nztAmyKqsvtHS2PQlcwoqmP66TaSC3m0ECfS1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "eccaecee-995b-4f0f-bb98-d61f34751524",
+      "name": "HTTP Request6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1460,
+        2060
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons6",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        2060
+      ],
+      "id": "6c1280cf-c586-483e-9791-740234d36405"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "3",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754222,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "af6e544d-3f34-4615-ad59-15a3f3dfcb6c",
+      "name": "Baserow",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        2060
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/cleanskinbr2/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "5c2ecac51e4cff9986ca049da482bb6d92838969"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_9mMlLRynS02sZKA9geK4QfaRriJSZJPOv0diG"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c83832f7-14df-43b6-a588-bc379d7bd472",
+      "name": "HTTP Request7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1460,
+        2300
+      ],
+      "alwaysOutputData": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons7",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        2300
+      ],
+      "id": "666922d1-9e26-4ba0-8f7d-d5ed0ed6aa6a"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "3",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754223,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "6efdb70a-e194-4d1a-8d6d-d80598dd5569",
+      "name": "Baserow7",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        2300
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagemoficial/orders?date=created_at:2022-11-01|2022-11-30&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&promocode_id[]={{$json[\"cupons\"]}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "0f68089b850eaa85ca328293f21897a611d2f7f9"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_GMRHBdr89JQxT7XyTgwCoK4Yn5qWH0aBA1HqT"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "58226ba4-766f-4267-957b-8de1fa052a69",
+      "name": "HTTP Request8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1460,
+        2560
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [\n  {\n    json:{cupons:items[0].json.cupom_junto.join('&promocode_id[]=')}\n  }\n]"
+      },
+      "name": "Lista de cupons8",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        2560
+      ],
+      "id": "de6e8c4c-1736-4f73-b1b1-7a74afa071dd"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118415,
+        "rowId": "3",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 754224,
+              "fieldValue": "={{Number.parseFloat( $json[\"meta\"][\"facets\"][\"amount\"][\"value\"]).toFixed(2)}}"
+            }
+          ]
+        }
+      },
+      "id": "06bb9586-9fe6-47f6-b21e-937a36dbc105",
+      "name": "Baserow8",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        2560
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ROSA SELVAGEM BRASIL",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons2",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        920,
+        2060
+      ],
+      "id": "a35a0d2e-56c2-4eff-8aa0-619f905265c9"
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ROSA SELVAGEM ÁCIDO",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons 4",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        920,
+        2300
+      ],
+      "id": "221345a3-94ac-4b85-a69a-aa5d693783d8"
+    },
+    {
+      "parameters": {
+        "operation": "aggregateItems",
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "ID ECOMMERCE",
+              "renameField": true,
+              "outputFieldName": "cupom_junto"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Array de Cupons 5",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        920,
+        2560
+      ],
+      "id": "a9e3ce95-92ae-43a0-a06e-7b1cff09d3dc"
+    },
+    {
+      "parameters": {
+        "databaseId": 46836,
+        "tableId": 118237,
+        "returnAll": true,
+        "additionalOptions": {
+          "filters": {
+            "fields": [
+              {
+                "field": 753157,
+                "value": "WALESKA"
+              }
+            ]
+          }
+        }
+      },
+      "id": "f8e2157f-dade-4c5e-93a1-5deabfa4a019",
+      "name": "WALESKA",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        560,
+        2320
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.z-api.io/instances/3B1C018FE037F0C08302DA965400693C/token/3F0C5FDA165654A355A4E14C/send-messages",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone",
+              "value": "5581997020817"
+            },
+            {
+              "name": "message",
+              "value": "=Somatório Thallys: R${{ $item(\"0\").$node[\"Baserow9\"].json[\"SOMA\"] }}\nSomatório Camila: R${{ $item(\"1\").$node[\"Baserow9\"].json[\"SOMA\"] }}\nSomatório Waleska: R${{ $item(\"2\").$node[\"Baserow9\"].json[\"SOMA\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "219fb567-d93f-4d52-8570-f5a8a52434ca",
+      "name": "HTTP Request9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2300,
+        2560
+      ],
+      "executeOnce": true,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "databaseId": 46836,
+        "tableId": 118415,
+        "returnAll": true,
+        "additionalOptions": {}
+      },
+      "id": "6bb06d9e-b6cd-4e11-8c2b-68d1750e1aad",
+      "name": "Baserow9",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        2040,
+        2560
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-01T03:20:00.787Z",
+  "versionId": "63fb7d4c-d5a0-47e9-ae5a-5aa09e520b07"
+}
