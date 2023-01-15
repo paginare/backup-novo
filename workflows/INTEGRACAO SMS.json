@@ -1,0 +1,107 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2023-01-04T14:45:03.015Z",
+  "id": "31",
+  "name": "INTEGRACAO SMS",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://dashboard.360nrs.com/api/rest/sms",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Basic dHVyYm9jbG91ZDpKWmh0NDYjIw=="
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\"to\":[\"5584981521797\"],\"from\":\"TEST\",\"message\":\"SMS text message\",\"encoding\":\"utf-16\"}",
+        "options": {}
+      },
+      "id": "fc6a5748-56cd-4961-9e19-15c671e27312",
+      "name": "360",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        780,
+        320
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "790b54fc-0b42-4080-a8d1-e762a2b8d4ba",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        400,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "turbo"
+            },
+            {
+              "name": "password",
+              "value": "VQN!y%yQu$Q!2y5hb$7E7W$"
+            },
+            {
+              "name": "destinatario",
+              "value": "84981521797"
+            },
+            {
+              "name": "msg",
+              "value": "Teste flash"
+            },
+            {
+              "name": "flashsms",
+              "value": "0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "75b7dee7-0b0b-4e90-8bf7-2f56e0a79bf5",
+      "name": "FACILITA - 5seg",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        780,
+        120
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:20:09.361Z",
+      "updatedAt": "2022-12-01T03:20:09.361Z",
+      "id": "2",
+      "name": "TEMPLATES 🟠"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2023-01-11T14:50:23.000Z",
+  "versionId": "be48fdf2-a78d-45dd-9d43-137f08717fd3"
+}
