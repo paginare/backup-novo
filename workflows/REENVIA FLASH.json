@@ -1,0 +1,414 @@
+{
+  "active": false,
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "XML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "XML1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "FACILITA - 5seg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FACILITA - 5seg": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-21T15:14:56.583Z",
+  "id": "25",
+  "name": "REENVIA FLASH",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedido.obter.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "id",
+              "value": "={{ $json[\"retorno\"][\"pedidos\"][\"pedido\"][\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9126ab30-f311-4fd7-af1a-e5f91b447f1a",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1020,
+        320
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "b19383cf-2875-41c1-a22d-ca7f8aa7ef25",
+      "name": "XML",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        320
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://webservice.flashpegasus.com.br/FlashPegasus/rest/padrao/importacao",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "=[{\n\"cliente_id\":7123,\n\"ctt_id\":9160,\n\"dna_hawb\":7,\n\"ccusto_id\":37138,\n\"tipo_enc_id\":21066,\n\"prod_flash_id\":157,\n\"frq_rec_id\":\"DSP\",\n\"ctt_ter_id\":null,\n\"tipo_merc_id\":null,\n\"num_enc_cli\":\"{{$json[\"retorno\"][\"pedido\"][\"numero\"]}}\",\n\"num_enc_ter\":\"\",\n\"num_cliente\":\"{{$json[\"retorno\"][\"pedido\"][\"numero\"]}}\",\n\"nome_rem\":\"LUCAS COMESTICOS LTDA\",\n\"endHawbs\":{\n\"nome_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"nome\"]}}\",\n\"logr_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"endereco\"]}}\",\n\"bairro_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"bairro\"]}}\",\n\"num_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"numero\"]}}\",\n\"compl_end_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"complemento\"]}}\",\n\"cid_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"cidade\"]}}\",\n\"uf_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"uf\"]}}\",\n\"cep_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"cep\"].replace(/\\D/g,'')}}\",\n\"fone1_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des\":\"\",\n\"cod_lote\":\"11112022\",\n\"peso_aferido\":null,\n\"peso_declarado\":0.03,\n\"qtde_itens\":\"1.0\",\n\"valor\": {{$json[\"retorno\"][\"pedido\"][\"total_pedido\"]}},\n\"endHawbs2\":{\n\"nome_des\":\"\",\n\"logr_dest\":\"\",\n\"bairro_des\":\"\",\n\"num_des\":\"\",\n\"compl_end_dest\":\"\",\n\"cid_dest\":\"\",\n\"uf_dest\":\"\",\n\"cep_dest\":null,\n\"fone1_des\":\"\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des_2\":\"\",\n\"id_local_rem\":39962,\n\"cpf_des\":\"82339822025\",\n\"cnpj_des\":\"\",\n\"ie_des\":\"\",\n\"email_des\":\"email@teste.com\",\n\"obs1\": \"\",\n\"obs2\": \"\",\n\"obs3\": \"\",\n\"obs4\": \"\",\n\"ge1\":\"\",\n\"ge2\":\"\",\n\"ge3\":\"\",\n\"ge4\":\"\",\n\"chave_nf\":\"31211018981084000157550010000001781748827596\"\n}]",
+        "options": {}
+      },
+      "id": "0aa4bf1a-1505-4a33-b156-f004177a4e6f",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1460,
+        320
+      ],
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "3",
+          "name": "Unnamed credential"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedidos.pesquisa.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "numero",
+              "value": "={{ $json[\"pedidos\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "371f4dda-1c1a-4876-9e66-82778b959f32",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        560,
+        320
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "305ba989-0d96-436a-b387-ee8020158991",
+      "name": "XML1",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        800,
+        320
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg",
+          "mode": "list",
+          "cachedResultName": "PEDIDOS FLASH",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 916474057,
+          "mode": "list",
+          "cachedResultName": "A ENVIAR",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg/edit#gid=916474057"
+        },
+        "options": {}
+      },
+      "id": "79f2b752-a160-49e7-bc3b-b80ac56e7fb1",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        80,
+        320
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "94160df3-ebc9-4a31-ab38-75786c28c7da",
+      "name": "SplitInBatches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        300,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "6b4fc14b-7ec8-4cc4-b710-d3e32e26469e",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2140,
+        320
+      ],
+      "webhookId": "2b8dd0be-236a-4970-9c82-e927ab961048"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg",
+          "mode": "list",
+          "cachedResultName": "novos flash",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1032730729,
+          "mode": "list",
+          "cachedResultName": "ENVIADOS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg/edit#gid=1032730729"
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "TXT FLASH",
+              "fieldValue": "={{ $json[\"arquivo\"] }}"
+            },
+            {
+              "fieldId": "PEDIDO TINY",
+              "fieldValue": "={{ $node[\"SplitInBatches\"].json[\"pedidos\"] }}"
+            },
+            {
+              "fieldId": "NOME",
+              "fieldValue": "={{ $node[\"XML1\"].json[\"retorno\"][\"pedidos\"][\"pedido\"][\"nome\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b74465ce-0b92-44f8-acea-7c31a335c247",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1880,
+        320
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "3ef9b43f-7880-49fe-a726-1d3100fa7942",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}"
+            },
+            {
+              "name": "msg",
+              "value": "=Seu pedido esta a caminho da transportadora. Rastreie pelo link abaixo\nhttps://www.flashcourier.com.br/rastreio/{{$node[\"Webhook\"].json[\"body\"][\"dados\"][\"numero\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c7eafd56-098d-48f7-aa8f-15a2be1cde38",
+      "name": "FACILITA - 5seg",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1680,
+        320
+      ],
+      "disabled": true
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "any"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-01-13T19:41:50.000Z",
+  "versionId": "2753921e-d183-4bde-91e5-943c3b0852d2"
+}
