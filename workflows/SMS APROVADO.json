@@ -1,0 +1,91 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "FACILITA - 5seg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-01-13T17:05:48.370Z",
+  "id": "32",
+  "name": "SMS APROVADO",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "b1196783-5ce0-48b2-a5b1-faf1a255d58d",
+        "options": {}
+      },
+      "id": "5d73810d-7c3a-40c0-b663-a5a854f34e39",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        80,
+        280
+      ],
+      "webhookId": "b1196783-5ce0-48b2-a5b1-faf1a255d58d"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{ $item(\"0\").$node[\"Webhook\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"] }}"
+            },
+            {
+              "name": "msg",
+              "value": "=Ola {{ $item(\"0\").$node[\"Webhook\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"] }}, seu pedido foi aprovado! Agora e so esperar que vamos te atualizar a cada etapa."
+            },
+            {
+              "name": "flashsms",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "abb80693-f672-4c12-b1bc-6bfcf3eb56f6",
+      "name": "FACILITA - 5seg",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        420,
+        280
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-15T16:50:32.000Z",
+  "versionId": "66eef68a-83cc-4596-b4db-35539d2b0fae"
+}
