@@ -1,0 +1,32 @@
+{
+  "active": true,
+  "connections": {},
+  "createdAt": "2023-01-03T15:34:29.326Z",
+  "id": "29",
+  "name": "ENVIO WPP E SMS FLASH",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "flash-wpp-sms",
+        "options": {}
+      },
+      "id": "cbe7398f-a1a8-47ce-9ffe-8249144b8318",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "19684732-7b02-4515-8981-75b951c607f1"
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-15T16:50:32.000Z",
+  "versionId": "2211925d-0a18-4fce-98cc-204945eacd0a"
+}
