@@ -1,0 +1,101 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-06T20:10:41.201Z",
+  "id": "16",
+  "name": "YAMPI - FLASH",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "flash-teste",
+        "options": {}
+      },
+      "id": "40415d3a-e35d-4e1f-bc59-b8ef75103774",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        540
+      ],
+      "webhookId": "dbd7d40a-0928-4bda-a3ca-0a13365f216f"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"body\"][\"resource\"][\"shipment_service\"] }}",
+              "value2": "FRETE SUPER EXPRESSO"
+            }
+          ]
+        }
+      },
+      "id": "19389259-8d66-4bc1-879b-79ed215db8cd",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://webservice.flashpegasus.com.br/FlashPegasus/rest/padrao/importacao",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "=[{\n\"cliente_id\":7123,\n\"ctt_id\":9160,\n\"dna_hawb\":7,\n\"ccusto_id\":37138,\n\"tipo_enc_id\":21066,\n\"prod_flash_id\":157,\n\"frq_rec_id\":\"DSP\",\n\"ctt_ter_id\":null,\n\"tipo_merc_id\":null,\n\"num_enc_cli\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"number\"]}}\",\n\"num_enc_ter\":\"\",\n\"num_cliente\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"number\"]}}\",\n\"nome_rem\":\"LUCAS COMESTICOS LTDA\",\n\"endHawbs\":{\n\"nome_des\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"generic_name\"]}}\",\n\"logr_dest\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"street\"]}}\",\n\"bairro_des\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"neighborhood\"]}}\",\n\"num_des\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"number\"]}}\",\n\"compl_end_dest\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"complement\"]}}\",\n\"cid_dest\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"city\"]}}\",\n\"uf_dest\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"state\"]}}\",\n\"cep_dest\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"zip_code\"]}}\",\n\"fone1_des\":\"{{$node[\"Webhook\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des\":\"\",\n\"cod_lote\":\"11112022\",\n\"peso_aferido\":null,\n\"peso_declarado\":0.03,\n\"qtde_itens\":\"1.0\",\n\"valor\": {{ $item(\"0\").$node[\"IF\"].json[\"body\"][\"resource\"][\"transactions\"][\"data\"][\"0\"][\"amount\"] }},\n\"endHawbs2\":{\n\"nome_des\":\"\",\n\"logr_dest\":\"\",\n\"bairro_des\":\"\",\n\"num_des\":\"\",\n\"compl_end_dest\":\"\",\n\"cid_dest\":\"\",\n\"uf_dest\":\"\",\n\"cep_dest\":null,\n\"fone1_des\":\"\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des_2\":\"\",\n\"id_local_rem\":39962,\n\"cpf_des\":\"82339822025\",\n\"cnpj_des\":\"\",\n\"ie_des\":\"\",\n\"email_des\":\"email@teste.com\",\n\"obs1\": \"\",\n\"obs2\": \"\",\n\"obs3\": \"\",\n\"obs4\": \"\",\n\"ge1\":\"\",\n\"ge2\":\"\",\n\"ge3\":\"\",\n\"ge4\":\"\",\n\"chave_nf\":\"31211018981084000157550010000001781748827596\"\n}]",
+        "options": {}
+      },
+      "id": "aa446edb-e562-411f-885e-7c96932450e0",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        460,
+        460
+      ],
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "3",
+          "name": "Unnamed credential"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-21T22:34:04.000Z",
+  "versionId": "d3f06216-9be2-46a1-ac40-9283eee7103e"
+}
