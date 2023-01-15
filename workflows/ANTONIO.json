@@ -1,0 +1,1016 @@
+{
+  "active": false,
+  "connections": {
+    "START ROBÔ": {
+      "main": [
+        [
+          {
+            "node": "TEXTO - BOTÃO - LISTA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "É GATILHO OU BOTÃO?": {
+      "main": [
+        [
+          {
+            "node": "ENVIA BOTÃO - DÚVIDA OU NÃO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ENVIA LISTA DÚVIDAS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "RESPOSTAS BOTÕES",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RESPOSTAS BOTÕES": {
+      "main": [
+        [
+          {
+            "node": "ENVIA TICKET",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ENVIA LISTA DÚVIDAS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ENVIA GIF PATRICK",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "RESPOSTAS LISTAS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RESPOSTAS BOTÕES 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RESPOSTAS LISTAS": {
+      "main": [
+        [
+          {
+            "node": "ENVIA GIF RIQUINHO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ENVIA GIF TAKE MY MONEY",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MSG PARCELAMENTO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "RESPOSTAS LISTAS - CONTINUAÇÃO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ENVIA GIF RIQUINHO": {
+      "main": [
+        [
+          {
+            "node": "MSG RESUMO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG RESUMO": {
+      "main": [
+        [
+          {
+            "node": "MSG RESUMO1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TEXTO - BOTÃO - LISTA": {
+      "main": [
+        [
+          {
+            "node": "É GATILHO OU BOTÃO?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG RESUMO1": {
+      "main": [
+        [
+          {
+            "node": "DÚVIDA SOLUCIONADA?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ENVIA GIF TAKE MY MONEY": {
+      "main": [
+        [
+          {
+            "node": "MSG VALOR PROMO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG VALOR PROMO": {
+      "main": [
+        [
+          {
+            "node": "MSG TEMPO DISPONÍVEL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG TEMPO DISPONÍVEL": {
+      "main": [
+        [
+          {
+            "node": "MSG TEMPO DISPONÍVEL1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG TEMPO DISPONÍVEL1": {
+      "main": [
+        [
+          {
+            "node": "DÚVIDA SOLUCIONADA?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ENVIA GIF PATRICK": {
+      "main": [
+        [
+          {
+            "node": "QUER CUPOM / NÃO QUER",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RESPOSTAS BOTÕES 2": {
+      "main": [
+        [
+          {
+            "node": "BOTÃO AÇÃO - LINK C DESCONTO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MSG DESPEDIDA 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG DESPEDIDA 1": {
+      "main": [
+        [
+          {
+            "node": "MSG DESPEDIDA 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG PARCELAMENTO": {
+      "main": [
+        [
+          {
+            "node": "DÚVIDA SOLUCIONADA?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RESPOSTAS LISTAS - CONTINUAÇÃO": {
+      "main": [
+        [
+          {
+            "node": "MSG IMPLATAÇÃO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MSG IMPLATAÇÃO1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG IMPLATAÇÃO": {
+      "main": [
+        [
+          {
+            "node": "Envia msg numero agencia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG IMPLATAÇÃO1": {
+      "main": [
+        [
+          {
+            "node": "AVISO LEAD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ENVIA TICKET": {
+      "main": [
+        [
+          {
+            "node": "BOTÃO AÇÃO - LINK HOTMART",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-09T00:59:22.796Z",
+  "id": "19",
+  "name": "ANTONIO",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "automacao-curso",
+        "options": {}
+      },
+      "id": "175a94b4-91c7-465f-85c3-77972fffb769",
+      "name": "START ROBÔ",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        1200
+      ],
+      "webhookId": "251d9f30-1aac-4bb8-a370-c764d398704a"
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json[\"texto\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "contains",
+              "value2": "quero comprar"
+            },
+            {
+              "operation": "contains",
+              "value2": "tenho dúvidas ",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "valor"
+            },
+            {
+              "operation": "contains",
+              "value2": "preço"
+            },
+            {
+              "operation": "contains",
+              "value2": "pressu"
+            },
+            {
+              "value2": "robo"
+            },
+            {
+              "operation": "contains",
+              "value2": "robô"
+            },
+            {
+              "operation": "contains",
+              "value2": "duvidas",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "duvida",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "dúvidas",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "duvidas"
+            },
+            {
+              "operation": "contains",
+              "value2": "cuanto"
+            },
+            {
+              "operation": "contains",
+              "value2": "investir"
+            },
+            {
+              "operation": "contains",
+              "value2": "investimento"
+            },
+            {
+              "operation": "contains",
+              "value2": "divide"
+            },
+            {
+              "operation": "contains",
+              "value2": "presso"
+            },
+            {
+              "operation": "contains",
+              "value2": "quantos que é?"
+            },
+            {
+              "operation": "contains",
+              "value2": "va lor"
+            },
+            {
+              "operation": "contains",
+              "value2": "pre ço"
+            },
+            {
+              "operation": "contains",
+              "value2": "curso"
+            },
+            {
+              "operation": "contains",
+              "value2": "cuso"
+            },
+            {
+              "operation": "contains",
+              "value2": "quero"
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "2902c24e-43d6-4ff9-a3eb-7af56558bb4d",
+      "name": "É GATILHO OU BOTÃO?",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json[\"button\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "contains",
+              "value2": "estou pronto, quero comprar"
+            },
+            {
+              "operation": "contains",
+              "value2": "sim, ainda tenho dúvidas ⚠️",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "não, só não vou comprar agora...",
+              "output": 2
+            },
+            {
+              "operation": "contains",
+              "value2": "quero comprar"
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "ba506b71-9cd2-4d67-b18b-2a7d8e5c858f",
+      "name": "RESPOSTAS BOTÕES",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        180,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json[\"resposta-lista\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "contains",
+              "value2": "o que vou aprender?"
+            },
+            {
+              "operation": "contains",
+              "value2": "quanto custa e por quanto tempo fica disponível",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "posso parcelar?",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "5705b84f-8905-4b4f-94de-66c22be75f66",
+      "name": "RESPOSTAS LISTAS",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-gif",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"gif\": \"https://paginare.com/wp-content/uploads/2022/09/riquinho.mp4\"\n}"
+      },
+      "id": "d131683c-6561-41a2-8ec8-f4fcc492341b",
+      "name": "ENVIA GIF RIQUINHO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2100,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-option-list",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Não se preocupe! Vamos te ajudar 😉\",\n  \"optionList\": {\n    \"title\": \"Dúvidas frequentes\",\n    \"buttonLabel\": \"Escolha sua dúvida\",\n    \"options\": [\n      {\n        \"id\": \"1\",\n        \"description\": \"\",\n        \"title\": \"Quanto custa e por quanto tempo fica disponível?\"\n      },\n      {\n        \"id\": \"2\",\n        \"description\": \"\",\n        \"title\": \"O que vou aprender?\"\n      },\n\n\t{\n\t\t\"id\": \"3\",\n\t\t\"description\": \"\",\n\t\t\"title\": \"Posso parcelar?\"\n},\n\t{\n\t\t\"id\": \"4\",\n\t\t\"description\": \"\",\n\t\t\"title\": \"Quero que você implemente pra mim, é possível?\"\n},\n{\n\"id\": \"5\",\n\"description\": \"\",\n\"title\": \"Nenhuma dessas, preciso falar com um atendente\"\n}\n    ]\n  }\n}"
+      },
+      "id": "6c4884e3-dc15-4204-b5ac-cbd630298085",
+      "name": "ENVIA LISTA DÚVIDAS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        460,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-list",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Que legal, {{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"nome\"]}}! Você possui alguma dúvida sobre o Notificações Lucrativas 🤖?\",\n  \"buttonList\": {\n    \"buttons\": [\n      {\n        \"id\": \"Sim, ainda tenho dúvidas ⚠️\",\n        \"label\": \"Sim, ainda tenho dúvidas ⚠️\"\n      },\n      {\n        \"id\": \"Quero comprar 🤑\",\n        \"label\": \"Quero comprar 🤑\"\n      }\n    ]\n  }\n}"
+      },
+      "id": "87755b85-01f9-410a-9fd7-6a2364644495",
+      "name": "ENVIA BOTÃO - DÚVIDA OU NÃO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        460,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Em um grande resumo, você vai aprender a como recuperar carrinhos abandonados, enviar mensagens personalizadas, códigos pix, código de boleto automaticamente via whatsapp pro seu lead.\"\n}"
+      },
+      "id": "41e22df4-ba07-4c23-9cc4-d81e1a59106f",
+      "name": "MSG RESUMO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2460,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Fora isso você vai conseguir fazer fluxos pra automatizar seus processos de envio de mensagens, como por exemplo um downsell ou upsell depois de x dias que o seu aluno comprou seu curso.\"\n}"
+      },
+      "id": "e4cd56b9-fe38-41ea-bab0-4e7194f2bcd1",
+      "name": "MSG RESUMO1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2780,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "numero",
+              "value": "={{$json[\"body\"][\"phone\"]}}"
+            },
+            {
+              "name": "texto",
+              "value": "={{$json[\"body\"][\"text\"][\"message\"].toLowerCase()}}"
+            },
+            {
+              "name": "button",
+              "value": "={{$json[\"body\"][\"buttonsResponseMessage\"][\"message\"].toLowerCase()}}"
+            },
+            {
+              "name": "resposta-lista",
+              "value": "={{$json[\"body\"][\"listResponseMessage\"][\"title\"].toLowerCase()}}"
+            },
+            {
+              "name": "token",
+              "value": "3F0C5FDA165654A355A4E14C"
+            },
+            {
+              "name": "instancia",
+              "value": "3B1C018FE037F0C08302DA965400693C"
+            },
+            {
+              "name": "nome",
+              "value": "={{$json[\"body\"][\"senderName\"]}}"
+            },
+            {
+              "name": "idmsg",
+              "value": "={{$json[\"body\"][\"messageId\"]}}"
+            },
+            {
+              "name": "photo",
+              "value": "={{$json[\"body\"][\"photo\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4e93ac24-edc9-4b1a-bf5f-bcc13f34ea71",
+      "name": "TEXTO - BOTÃO - LISTA",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -760,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-list",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Agora que solucionamos sua dúvida, existe mais alguma outra que podemos ajudar?\",\n  \"buttonList\": {\n    \"buttons\": [\n      {\n        \"id\": \"Sim, ainda tenho dúvidas ⚠️\",\n        \"label\": \"Sim, ainda tenho dúvidas ⚠️\"\n      },\n      {\n        \"id\": \"Estou pronto, quero comprar\",\n        \"label\": \"Estou pronto, quero comprar\"\n      }\n    ]\n  }\n}"
+      },
+      "id": "78be8a82-0a8a-4ab2-b3ff-860b1a673762",
+      "name": "DÚVIDA SOLUCIONADA?",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3180,
+        1420
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-gif",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"gif\": \"https://paginare.com/wp-content/uploads/2022/09/takemymoney.mp4\"\n}"
+      },
+      "id": "e903e7cb-df56-42ed-8326-98aced7b4b3a",
+      "name": "ENVIA GIF TAKE MY MONEY",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2100,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"O valor *promocional* é de R$297,00\"\n}"
+      },
+      "id": "32a0d93e-c3d0-4a15-83cc-bfc448e18b38",
+      "name": "MSG VALOR PROMO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2340,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"O curso vai ficar disponível para você por 1 ano contando a partir da data em que seu pagamento for aprovado.\"\n}"
+      },
+      "id": "051d232c-d9f0-4423-98f2-9b0ca90ef44a",
+      "name": "MSG TEMPO DISPONÍVEL",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Lembrando que apenas os 100 primeiros alunos farão parte do grupo de suporte 😉\"\n}"
+      },
+      "id": "90debd1c-faa6-4d43-861b-f8ee605199e6",
+      "name": "MSG TEMPO DISPONÍVEL1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2780,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-gif",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"gif\": \"https://paginare.com/wp-content/uploads/2022/09/ezgif-3-038e3f46bb.mp4\"\n}"
+      },
+      "id": "f4ca30e9-1b8c-4235-a58d-6f476b8c9dee",
+      "name": "ENVIA GIF PATRICK",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-list",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Mas nem se eu mandar um cupomzinho?\",\n  \"buttonList\": {\n    \"buttons\": [\n      {\n        \"id\": \"Sim, quero um cupom 🥹\",\n        \"label\": \"Sim, quero um cupom 🥹\"\n      },\n      {\n        \"id\": \"Não, realmente não consigo agora\",\n        \"label\": \"Não, realmente não consigo agora\"\n      }\n    ]\n  }\n}"
+      },
+      "id": "7f07b479-d09e-4dd1-9d0b-ec3cd269d117",
+      "name": "QUER CUPOM / NÃO QUER",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json[\"button\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "contains",
+              "value2": "sim, quero um cupom 🥹"
+            },
+            {
+              "operation": "contains",
+              "value2": "não, realmente não consigo agora",
+              "output": 1
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "f1bd8dc3-dfb0-4459-9358-e30025c5860c",
+      "name": "RESPOSTAS BOTÕES 2",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Tudo bem, caso queira comprar o curso basta responder aqui com a frase: quero comprar o curso\"\n}"
+      },
+      "id": "fdd4c1d1-1833-4620-9842-b4848bb1aa3e",
+      "name": "MSG DESPEDIDA 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1520,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Combinado?\"\n}"
+      },
+      "id": "4e3786a3-56c1-4377-8ee8-cb574eb70bfc",
+      "name": "MSG DESPEDIDA 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1740,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-actions",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n \"message\": \"Ihuuul!, {{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"nome\"]}} seu lugar na comunidade já está reservado, agora basta clicar abaixo e será redirecionado para a página de compra👇🏻\",\n \"buttonActions\": [\n {\n \"id\": \"link_principal\",\n \"type\": \"URL\",\n \"url\": \"https://pay.hotmart.com/C74020979M\",\n \"label\": \"Comprar agora\"\n }\n ]\n}"
+      },
+      "id": "b53145a8-6cc7-448f-9f63-3e0714fd567a",
+      "name": "BOTÃO AÇÃO - LINK HOTMART",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1460,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-actions",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n \"message\": \"Pronto! Pra não ser injusto com os outros alunos esse link tem o valor de R$197 porém você não terá acesso ao suporte e aos bônus do curso 😉\",\n \"buttonActions\": [\n {\n \"id\": \"link_desconto\",\n \"type\": \"URL\",\n \"url\": \"https://pay.hotmart.com/C74020979M?off=8oa7pfah\",\n \"label\": \"Comprar agora com desconto\"\n }\n ]\n}"
+      },
+      "id": "5798eff4-1c36-4778-908f-7d89c6ecedcb",
+      "name": "BOTÃO AÇÃO - LINK C DESCONTO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1520,
+        2100
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Claro, o parcelamento pode ser feito em até 12x de R$29,64\"\n}"
+      },
+      "id": "80c11966-ff90-4484-8713-bebf520e47cf",
+      "name": "MSG PARCELAMENTO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2780,
+        1640
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json[\"resposta-lista\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "contains",
+              "value2": "quero que você implemente pra mim, é possível?"
+            },
+            {
+              "operation": "contains",
+              "value2": "nenhuma dessas, preciso falar com um atendente",
+              "output": 1
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "bde510b7-8791-4cc8-8517-80ca6196e6df",
+      "name": "RESPOSTAS LISTAS - CONTINUAÇÃO",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        2460,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Sim, é possível iremos te chamar no número da nossa agência para passar seu orçamento 😉\"\n}"
+      },
+      "id": "6c5ced94-1b0e-4806-8ce2-19e20d511e61",
+      "name": "MSG IMPLATAÇÃO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        1900
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "={{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Opa, tudo bem? \n\nVi aqui que você solicitou um orçamento pra automação, consegue me explicar um pouco mais do que você precisa?"
+            },
+            {
+              "name": "sender",
+              "value": "558481521797"
+            },
+            {
+              "name": "token",
+              "value": "oYuCko1X1ubgA7xzKzDu"
+            }
+          ]
+        }
+      },
+      "id": "d658e49f-a533-4011-8705-fac4d642767b",
+      "name": "Envia msg numero agencia",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3040,
+        1900
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"5584981521797\",\n  \"message\": \"Responde lá... Lead novo\"\n}"
+      },
+      "id": "4aef6008-1879-48c2-883f-a212555f8c04",
+      "name": "AVISO LEAD",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3040,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Tudo bem, já direcionei você para um atendente\"\n}"
+      },
+      "id": "00de998b-15b3-4f7e-be47-496c19402b93",
+      "name": "MSG IMPLATAÇÃO1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-image",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"image\": \"https://res.cloudinary.com/dazfmyb9p/image/upload/c_fit,w_500,co_rgb:ffffff,l_text:arial_95_style_bold:{{$json[\"nome\"]}},x_10,y_-330/co_rgb:000000,l_text:montserrat_30:{{$node[\"START ROBÔ\"].json[\"body\"][\"messageId\"]}},y_644/v1664497306/1-Ticket-Mockup_cjoj25.jpg\"\n}"
+      },
+      "id": "9c9ec44e-8d80-438d-89cd-22adf70f7739",
+      "name": "ENVIA TICKET",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        820
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-09T00:59:18.913Z",
+      "updatedAt": "2022-12-09T00:59:18.913Z",
+      "id": "7",
+      "name": "🤖"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-06T21:21:36.000Z",
+  "versionId": "6428c456-5838-4dcf-8f6e-8d1522acd79a"
+}
