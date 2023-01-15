@@ -1,0 +1,79 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-01T16:33:21.041Z",
+  "id": "10",
+  "name": "STATUS API",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "statuscake",
+        "options": {}
+      },
+      "id": "0691a768-a699-4eb6-bf71-e62196ad8fe2",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        280
+      ],
+      "webhookId": "9e80409e-91df-41b2-a823-77b1aeebcf82"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.z-api.io/instances/3B1C018FE037F0C08302DA965400693C/token/3F0C5FDA165654A355A4E14C/send-messages",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone",
+              "value": "5584981521797"
+            },
+            {
+              "name": "message",
+              "value": "={{ $json[\"body\"][\"URL\"] }} tá {{$json[\"body\"][\"Status\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "61ca6c8c-7bf3-4abe-871c-b1253d048da6",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -160,
+        280
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:20:57.770Z",
+      "updatedAt": "2022-12-01T03:20:57.770Z",
+      "id": "4",
+      "name": "ROBÔS 🤖"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-15T16:50:31.000Z",
+  "versionId": "d4c2ee38-4997-49f4-876b-a279d4194d71"
+}
