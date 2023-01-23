@@ -1,0 +1,75 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-01T03:20:13.045Z",
+  "id": "2",
+  "name": "CONTADOR DE CICLOS",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "4c92f53a-02b9-41db-b07b-ebf553ee547a",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        920,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "//retorna o static data desse node (se precisar acessar em outros nodes é só trocar de 'node' pra 'global')\nconst staticData = getWorkflowStaticData('node');\n\n//acessa os dados da última execução\nconst lastExecution = staticData.lastExecution;\n\n//atualiza os dados da última execução somando +1\nstaticData.lastExecution += 1;\n\n//retorna o valor no item\nfor (item of items) {\n  item.json.valor = staticData.lastExecution;\n}\n\nreturn items;"
+      },
+      "id": "33e69328-5513-45c3-ad22-695971a02b23",
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1380,
+        360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "testrun",
+        "options": {}
+      },
+      "id": "2572c7d8-8fc4-4569-a57e-404d086c2b70",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        1140,
+        360
+      ],
+      "webhookId": "e819950b-c8da-4fab-a844-fb14356428c0",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:20:09.361Z",
+      "updatedAt": "2022-12-01T03:20:09.361Z",
+      "id": "2",
+      "name": "TEMPLATES 🟠"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-01T03:20:13.045Z",
+  "versionId": "d5fb2327-f2c3-4fdd-b983-9df9abc521ea"
+}
