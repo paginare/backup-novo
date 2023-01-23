@@ -1,0 +1,258 @@
+{
+  "active": false,
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "YAMPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Baserow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "More Pages?": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "YAMPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-02T03:11:09.104Z",
+  "id": "13",
+  "name": "PUXA PEDIDO YAMPI",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "b2c56099-f4ff-4ff9-9473-d78060ea1b21",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        200,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        840,
+        440
+      ],
+      "id": "63100ed4-9887-4187-8c8d-bcc7d3ac783a"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $item(\"0\").$node[\"YAMPI\"].json[\"meta\"][\"pagination\"][\"links\"][\"next\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "name": "More Pages?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        620
+      ],
+      "id": "fa43d96e-d599-421a-bed6-a5bd0016b475"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "next_page",
+              "value": "={{$node[\"YAMPI\"].json[\"meta\"][\"pagination\"][\"links\"][\"next\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        680
+      ],
+      "id": "e98af21e-5963-47a5-a033-2a3cda2da42a",
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "databaseId": 76,
+        "tableId": 432,
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 3758,
+              "fieldValue": "={{$json[\"customer\"][\"data\"][\"generic_name\"]}}"
+            },
+            {
+              "fieldId": 3759,
+              "fieldValue": "={{$json[\"id\"]}}"
+            },
+            {
+              "fieldId": 3760,
+              "fieldValue": "={{$json[\"number\"]}}"
+            },
+            {
+              "fieldId": 3761,
+              "fieldValue": "={{$json[\"shipping_address\"][\"data\"][\"street\"]}}"
+            },
+            {
+              "fieldId": 3766,
+              "fieldValue": "={{$json[\"shipping_address\"][\"data\"][\"state\"]}}"
+            },
+            {
+              "fieldId": 3764,
+              "fieldValue": "={{$json[\"shipping_address\"][\"data\"][\"complement\"]}}"
+            },
+            {
+              "fieldId": 3762,
+              "fieldValue": "={{$json[\"shipping_address\"][\"data\"][\"neighborhood\"]}}"
+            },
+            {
+              "fieldId": 3763,
+              "fieldValue": "={{$json[\"shipping_address\"][\"data\"][\"number\"]}}"
+            },
+            {
+              "fieldId": 3768,
+              "fieldValue": "={{$json[\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "fieldId": 3769,
+              "fieldValue": "={{$json[\"transactions\"][\"data\"][0][\"amount\"]}}"
+            },
+            {
+              "fieldId": 3767,
+              "fieldValue": "={{$json[\"shipping_address\"][\"data\"][\"zipcode\"]}}"
+            },
+            {
+              "fieldId": 3765,
+              "fieldValue": "={{$json[\"shipping_address\"][\"data\"][\"city\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "fe484752-3ce6-49f1-a6c4-ab1fa7317ac0",
+      "name": "Baserow",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        440
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "1",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## YAMPI'",
+        "height": 616.3636363636376,
+        "width": 1132.7272727272716
+      },
+      "id": "7d1cf223-ffdc-440c-9014-030eddb7d192",
+      "name": "Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{$json[\"next_page\"]  || \"https://api.dooki.com.br/v2/rosaselvagem/orders?date=created_at:2022-12-01|2022-12-31&status_id[]=4&status_id[]=5&status_id[]=6&status_id[]=7&status_id[]=10&status_id[]=12&limit=2000&skipCache=true\"}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "973feecfab2bdbc1583e2074133810dded1cd87f"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_nztAmyKqsvtHS2PQlcwoqmP66TaSC3m0ECfS1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "84338ffd-7706-44e8-b6a3-4d1f1dad5de5",
+      "name": "YAMPI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        520,
+        440
+      ],
+      "executeOnce": false
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    },
+    {
+      "createdAt": "2022-12-01T03:20:57.770Z",
+      "updatedAt": "2022-12-01T03:20:57.770Z",
+      "id": "4",
+      "name": "ROBÔS 🤖"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-20T14:10:53.000Z",
+  "versionId": "bb111a0b-81c8-4401-b6de-7ecd704612c3"
+}
