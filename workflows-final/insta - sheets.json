@@ -1,0 +1,108 @@
+{
+  "active": true,
+  "connections": {
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-14T18:49:59.339Z",
+  "id": "21",
+  "name": "insta - sheets",
+  "nodes": [
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"nome\"]}}"
+            },
+            {
+              "name": "whatsapp",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"whatsapp\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2bc28cea-83f8-4dee-8a8a-246047ab2046",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        440,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "sheets",
+        "options": {}
+      },
+      "id": "28133544-c420-4cb8-9528-c4d48d872ee9",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        220,
+        260
+      ],
+      "webhookId": "ce4e9616-7d05-4f35-a615-d1c1b77ae87d"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1fpIn6lstcs_c9C0izdiupnM45nWsyCw6n3__AMgFpRY",
+        "options": {}
+      },
+      "id": "39ebe49e-0bdb-48cb-b385-4837c7ca3b12",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        680,
+        60
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-21T01:33:30.000Z",
+  "versionId": "2c76cf54-196d-4340-afac-3b9f074d0c97"
+}
