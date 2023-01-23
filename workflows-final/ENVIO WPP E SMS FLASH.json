@@ -1,0 +1,215 @@
+{
+  "active": true,
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "XML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML": {
+      "main": [
+        [
+          {
+            "node": "FACILITA - 5seg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "XML1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-01-03T15:34:29.326Z",
+  "id": "29",
+  "name": "ENVIO WPP E SMS FLASH",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "flash-wpp-sms",
+        "options": {}
+      },
+      "id": "cbe7398f-a1a8-47ce-9ffe-8249144b8318",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        280
+      ],
+      "webhookId": "19684732-7b02-4515-8981-75b951c607f1"
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedido.obter.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "id",
+              "value": "={{ $json[\"retorno\"][\"pedidos\"][\"pedido\"][\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "37a4367a-8ac1-4bfa-a31b-ae8fb1e30f7a",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        480,
+        280
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "ea8cae23-5e16-4b28-b633-9d2b26f0215a",
+      "name": "XML",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        700,
+        280
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedidos.pesquisa.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "numero",
+              "value": "={{ $json[\"body\"][\"numero_do_cliente\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f50ce5fe-fee0-4f6a-a222-096def22c47b",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        20,
+        280
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "62882d8a-1b9f-420f-af1c-3082c2fc71b8",
+      "name": "XML1",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        260,
+        280
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{ $item(\"0\").$node[\"XML\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}"
+            },
+            {
+              "name": "msg",
+              "value": "=ROSA SELVAGEM: Seu pedido encontra-se como  {{$node[\"Webhook\"].json[\"body\"][\"descrição_status\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "876156f8-1065-43c4-b57f-c746862f952d",
+      "name": "FACILITA - 5seg",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        960,
+        280
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2023-01-23T19:14:41.472Z",
+      "updatedAt": "2023-01-23T19:14:41.472Z",
+      "id": "8",
+      "name": "⚡️"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-23T19:14:42.000Z",
+  "versionId": "4318a1fe-a021-444c-a6a1-bc8b4377faff"
+}
