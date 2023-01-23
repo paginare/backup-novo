@@ -1,157 +1,364 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
-    "É GATILHO OU BOTÃO?": {
+    "APV / CARRINHO / ATT": {
       "main": [
         [
           {
-            "node": "ENVIA BOTÃO - DÚVIDA OU NÃO",
+            "node": "Msg Pedido Aprovado1",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "ENVIA LISTA DÚVIDAS",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [],
-        [
-          {
-            "node": "RESPOSTAS BOTÕES",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "RESPOSTAS BOTÕES": {
-      "main": [
-        [
-          {
-            "node": "BOTÃO AÇÃO - LINK HOTMART",
+            "node": "Msg Carrinho Abandonado1",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "ENVIA LISTA DÚVIDAS",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [],
-        [
-          {
-            "node": "RESPOSTAS LISTAS",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "RESPOSTAS LISTAS": {
-      "main": [
-        [
-          {
-            "node": "MSG INDIVIDUAL",
+            "node": "SEP / TRANP / ENTREGUE",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "MSG VALOR PROMO",
+            "node": "Msg não aprovado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SEP / TRANP / ENTREGUE": {
+      "main": [
+        [
+          {
+            "node": "Msg Produto em Separação1",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "MSG PARCELAMENTO",
+            "node": "Msg Em Transporte1",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "RESPOSTAS LISTAS - CONTINUAÇÃO",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "TEXTO - BOTÃO - LISTA": {
-      "main": [
-        [
-          {
-            "node": "É GATILHO OU BOTÃO?",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "MSG VALOR PROMO": {
-      "main": [
-        [
-          {
-            "node": "DÚVIDA SOLUCIONADA?",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "MSG PARCELAMENTO": {
-      "main": [
-        [
-          {
-            "node": "DÚVIDA SOLUCIONADA?",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "RESPOSTAS LISTAS - CONTINUAÇÃO": {
-      "main": [
-        [
-          {
-            "node": "MSG IMPLATAÇÃO",
+            "node": "Msg Entregue1",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "MSG IMPLATAÇÃO1",
+            "node": "Msg PRONTO P ENVIO",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "MSG INDIVIDUAL": {
+    "Msg Carrinho Abandonado1": {
       "main": [
         [
           {
-            "node": "DÚVIDA SOLUCIONADA?",
+            "node": "Msg Carrinho Abandonado2",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Webhook": {
+    "Msg Carrinho Abandonado2": {
       "main": [
         [
           {
-            "node": "TEXTO - BOTÃO - LISTA",
+            "node": "Msg Carrinho Abandonado3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg Pedido Aprovado1": {
+      "main": [
+        [
+          {
+            "node": "Msg Pedido Aprovado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg Pedido Aprovado": {
+      "main": [
+        [
+          {
+            "node": "Msg Pedido Aprovado2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg PRONTO P ENVIO": {
+      "main": [
+        [
+          {
+            "node": "Msg PRONTO P ENVIO1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg Entregue1": {
+      "main": [
+        [
+          {
+            "node": "Msg Entregue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg Entregue": {
+      "main": [
+        [
+          {
+            "node": "Msg Entregue2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg não aprovado": {
+      "main": [
+        [
+          {
+            "node": "Msg não aprovado1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg não aprovado1": {
+      "main": [
+        [
+          {
+            "node": "Msg não aprovado2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "START YAMPI": {
+      "main": [
+        [
+          {
+            "node": "APV / CARRINHO / ATT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg Produto em Separação1": {
+      "main": [
+        [
+          {
+            "node": "4 dias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4 dias": {
+      "main": [
+        [
+          {
+            "node": "CORTE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3 dias": {
+      "main": [
+        [
+          {
+            "node": "MONTAGEM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CORTE": {
+      "main": [
+        [
+          {
+            "node": "3 dias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MONTAGEM": {
+      "main": [
+        [
+          {
+            "node": "4 dias -",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ACABAMENTO": {
+      "main": [
+        [
+          {
+            "node": "3 dias -",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4 dias -": {
+      "main": [
+        [
+          {
+            "node": "ACABAMENTO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3 dias -": {
+      "main": [
+        [
+          {
+            "node": "ESCRITÓRIO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "START YAMPI - BOLETO E PIX": {
+      "main": [
+        [
+          {
+            "node": "CONFERÊNCIA SE É BOLETO OU PIX",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CONFERÊNCIA SE É BOLETO OU PIX": {
+      "main": [
+        [
+          {
+            "node": "1 - PIX / 2 - BOLETO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NoOp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1 - PIX / 2 - BOLETO": {
+      "main": [
+        [
+          {
+            "node": "Msg PIX 1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Msg BOLETO 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg PIX 1": {
+      "main": [
+        [
+          {
+            "node": "Msg PIX 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg PIX 2": {
+      "main": [
+        [
+          {
+            "node": "Msg PIX 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg BOLETO 1": {
+      "main": [
+        [
+          {
+            "node": "MSG BOLETO 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG BOLETO 2": {
+      "main": [
+        [
+          {
+            "node": "MSG BOLETO 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MSG BOLETO 3": {
+      "main": [
+        [
+          {
+            "node": "MSG BOLETO ",
             "type": "main",
             "index": 0
           }
@@ -159,426 +366,1150 @@
       ]
     }
   },
-  "createdAt": "2022-12-01T03:21:03.681Z",
-  "id": "4",
+  "createdAt": "2022-12-01T03:26:25.955Z",
+  "id": "7",
   "name": "ROBÔ",
   "nodes": [
     {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{$json[\"texto\"]}}",
-        "rules": {
-          "rules": [
-            {
-              "operation": "contains",
-              "value2": "quero comprar"
-            },
-            {
-              "operation": "contains",
-              "value2": "tenho dúvidas ",
-              "output": 1
-            },
-            {
-              "operation": "contains",
-              "value2": "valor"
-            },
-            {
-              "operation": "contains",
-              "value2": "preço"
-            },
-            {
-              "operation": "contains",
-              "value2": "pressu"
-            },
-            {
-              "value2": "robo"
-            },
-            {
-              "operation": "contains",
-              "value2": "robô"
-            },
-            {
-              "operation": "contains",
-              "value2": "duvidas",
-              "output": 1
-            },
-            {
-              "operation": "contains",
-              "value2": "duvida",
-              "output": 1
-            },
-            {
-              "operation": "contains",
-              "value2": "dúvidas",
-              "output": 1
-            },
-            {
-              "operation": "contains",
-              "value2": "duvidas"
-            },
-            {
-              "operation": "contains",
-              "value2": "cuanto"
-            },
-            {
-              "operation": "contains",
-              "value2": "investir"
-            },
-            {
-              "operation": "contains",
-              "value2": "investimento"
-            },
-            {
-              "operation": "contains",
-              "value2": "divide"
-            },
-            {
-              "operation": "contains",
-              "value2": "presso"
-            },
-            {
-              "operation": "contains",
-              "value2": "quantos que é?"
-            },
-            {
-              "operation": "contains",
-              "value2": "va lor"
-            },
-            {
-              "operation": "contains",
-              "value2": "pre ço"
-            },
-            {
-              "operation": "contains",
-              "value2": "curso"
-            },
-            {
-              "operation": "contains",
-              "value2": "cuso"
-            },
-            {
-              "operation": "contains",
-              "value2": "quero"
-            },
-            {
-              "operation": "contains",
-              "value2": "olá will, eu tenho uma dúvida, pode me ajudar?"
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "6cef8907-3801-4fe8-8490-2aa77c3b9e72",
-      "name": "É GATILHO OU BOTÃO?",
-      "type": "n8n-nodes-base.switch",
+      "parameters": {},
+      "id": "82e2d6b7-08ea-4937-8778-4f8540233193",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
-        -680,
-        980
+        -520,
+        1500
       ]
     },
     {
       "parameters": {
         "dataType": "string",
-        "value1": "={{$json[\"button\"]}}",
+        "value1": "={{$json[\"body\"][\"event\"]}}",
         "rules": {
           "rules": [
             {
-              "operation": "contains",
-              "value2": "sim, ainda tenho dúvidas ⚠️",
+              "value2": "order.paid"
+            },
+            {
+              "value2": "cart.reminder",
               "output": 1
             },
             {
-              "operation": "contains",
-              "value2": "quero comprar"
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "2bc8b615-acd0-4547-b5c5-5e6f665f702b",
-      "name": "RESPOSTAS BOTÕES",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
-      "position": [
-        -240,
-        1000
-      ]
-    },
-    {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{$json[\"resposta-lista\"]}}",
-        "rules": {
-          "rules": [
-            {
-              "operation": "contains",
-              "value2": "posso comprar um resumo separadamente?"
-            },
-            {
-              "operation": "contains",
-              "value2": "como terei acesso?",
-              "output": 1
-            },
-            {
-              "operation": "contains",
-              "value2": "qual valor do kit?",
+              "value2": "order.status.updated",
               "output": 2
+            },
+            {
+              "value2": "refused",
+              "output": 3
             }
           ]
-        },
-        "fallbackOutput": 3
+        }
       },
-      "id": "229813f2-c7f6-4a7c-b2be-89aec764998d",
-      "name": "RESPOSTAS LISTAS",
+      "id": "ec2f7f23-ef4a-48e9-8995-ec09ce3693e1",
+      "name": "APV / CARRINHO / ATT",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        300,
-        1040
+        40,
+        1500
       ]
     },
     {
       "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-option-list",
-        "jsonParameters": true,
-        "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Não se preocupe! Vamos te ajudar 😉\",\n  \"optionList\": {\n    \"title\": \"Dúvidas frequentes\",\n    \"buttonLabel\": \"Escolha sua dúvida\",\n    \"options\": [\n      {\n        \"id\": \"1\",\n        \"description\": \"\",\n        \"title\": \"Posso comprar um resumo separadamente?\"\n      },\n      {\n        \"id\": \"2\",\n        \"description\": \"\",\n        \"title\": \"Como terei acesso?\"\n      },\n\n\t{\n\t\t\"id\": \"3\",\n\t\t\"description\": \"\",\n\t\t\"title\": \"Qual valor do KIT?\"\n},\n\t{\n\t\t\"id\": \"4\",\n\t\t\"description\": \"\",\n\t\t\"title\": \"Quais os materiais vou receber?\"\n},\n{\n\"id\": \"5\",\n\"description\": \"\",\n\"title\": \"Nenhuma dessas, preciso falar com um atendente\"\n}\n    ]\n  }\n}"
+        "value1": "={{$json[\"body\"][\"resource\"][\"status_id\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "equal",
+              "value2": 5
+            },
+            {
+              "operation": "equal",
+              "value2": 6,
+              "output": 1
+            },
+            {
+              "operation": "equal",
+              "value2": 7,
+              "output": 2
+            },
+            {
+              "operation": "equal",
+              "value2": 12,
+              "output": 3
+            }
+          ]
+        }
       },
-      "id": "e6e9f441-cfcc-4433-962a-b1fa274f26b8",
-      "name": "ENVIA LISTA DÚVIDAS",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
+      "id": "d6d8af30-b27f-49ea-ab26-0a2a77d9c4a4",
+      "name": "SEP / TRANP / ENTREGUE",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
       "position": [
-        -20,
-        600
+        880,
+        1480
       ]
     },
     {
       "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-list",
-        "jsonParameters": true,
+        "url": "https://api.dw-api.com/send",
         "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Que legal, {{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"nome\"]}}! Você possui alguma dúvida sobre o Resumos do Will?\",\n  \"buttonList\": {\n    \"buttons\": [\n      {\n        \"id\": \"Sim, ainda tenho dúvidas ⚠️\",\n        \"label\": \"Sim, ainda tenho dúvidas ⚠️\"\n      },\n      {\n        \"id\": \"Quero comprar 🤑\",\n        \"label\": \"Quero comprar 🤑\"\n      }\n    ]\n  }\n}"
-      },
-      "id": "435dceac-f16c-498e-b9b5-3fd5526f7c10",
-      "name": "ENVIA BOTÃO - DÚVIDA OU NÃO",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        -20,
-        360
-      ]
-    },
-    {
-      "parameters": {
-        "values": {
-          "string": [
+        "queryParametersUi": {
+          "parameter": [
             {
-              "name": "numero",
-              "value": "={{$json[\"body\"][\"phone\"]}}"
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
             },
             {
-              "name": "texto",
-              "value": "={{$json[\"body\"][\"text\"][\"message\"].toLowerCase()}}"
+              "name": "msgtext",
+              "value": "=Olá, {{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}! Tudo bem? 🥰"
             },
             {
-              "name": "button",
-              "value": "={{$json[\"body\"][\"buttonsResponseMessage\"][\"message\"].toLowerCase()}}"
-            },
-            {
-              "name": "resposta-lista",
-              "value": "={{$json[\"body\"][\"listResponseMessage\"][\"title\"].toLowerCase()}}"
+              "name": "sender",
+              "value": "558188550851"
             },
             {
               "name": "token",
-              "value": "2B2BBEEB2F4D0177835C394E"
-            },
-            {
-              "name": "instancia",
-              "value": "3B2A2C1CCEA10030D66996D3C7000108"
-            },
-            {
-              "name": "nome",
-              "value": "={{$json[\"body\"][\"senderName\"]}}"
+              "value": "u3MzhRbQ3PKw0ySP2czj"
             }
           ]
-        },
-        "options": {}
+        }
       },
-      "id": "8e366cb6-5266-487f-b3c1-20ce9ea7737c",
-      "name": "TEXTO - BOTÃO - LISTA",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 1,
-      "position": [
-        -940,
-        980
-      ]
-    },
-    {
-      "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-list",
-        "jsonParameters": true,
-        "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Agora que solucionamos sua dúvida, existe mais alguma outra que podemos ajudar?\",\n  \"buttonList\": {\n    \"buttons\": [\n      {\n        \"id\": \"Sim, ainda tenho dúvidas ⚠️\",\n        \"label\": \"Sim, ainda tenho dúvidas ⚠️\"\n      },\n      {\n        \"id\": \"Estou pronto, quero comprar\",\n        \"label\": \"Estou pronto, quero comprar\"\n      }\n    ]\n  }\n}"
-      },
-      "id": "28cad7ca-6137-4aa2-bff0-0c0a24a34597",
-      "name": "DÚVIDA SOLUCIONADA?",
+      "id": "8ff54047-a29b-471d-bb26-3f0a98e580df",
+      "name": "Msg Pedido Aprovado1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        1360,
-        760
+        660,
+        580
       ]
     },
     {
       "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
-        "jsonParameters": true,
+        "url": "https://api.dw-api.com/send",
         "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Você recebe o acesso no e-mail. Você tem acesso vitalício, só precisa pagar uma vez e usar para sempre, além de receber todas as atualizações.\"\n}"
-      },
-      "id": "9b05aaa6-ca2a-477e-828d-bf2ed04609ba",
-      "name": "MSG VALOR PROMO",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        860,
-        760
-      ]
-    },
-    {
-      "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-button-actions",
-        "jsonParameters": true,
-        "options": {},
-        "bodyParametersJson": "={\n \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n \"message\": \"Ihuuul!, {{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"nome\"]}}, agora basta clicar abaixo e será redirecionado para a página de compra👇🏻\",\n \"buttonActions\": [\n {\n \"id\": \"link_principal\",\n \"type\": \"URL\",\n \"url\": \"https://pay.kiwify.com.br/rxQAkj5\",\n \"label\": \"Comprar agora\"\n }\n ]\n}"
-      },
-      "id": "120675bd-1825-4e3c-b9c5-7a7d31fbc0ac",
-      "name": "BOTÃO AÇÃO - LINK HOTMART",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        240,
-        780
-      ]
-    },
-    {
-      "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
-        "jsonParameters": true,
-        "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"O KIT com todos os 26 resumos, atualizações semanais e os 5 bônus exclusivos na promoção de semana de provas por R$147 reais.\\n\\n\"\n}"
-      },
-      "id": "188fb784-6e6a-4f2c-8e72-5d798034505f",
-      "name": "MSG PARCELAMENTO",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        840,
-        1000
-      ]
-    },
-    {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{$json[\"resposta-lista\"]}}",
-        "rules": {
-          "rules": [
+        "queryParametersUi": {
+          "parameter": [
             {
-              "operation": "contains",
-              "value2": "quais os materiais vou receber?"
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
             },
             {
-              "operation": "contains",
-              "value2": "Nenhuma dessas, preciso falar com um atendente",
-              "output": 1
+              "name": "msgtext",
+              "value": "=Olá, {{$json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}!\nVimos que você chegou ao nosso checkout mas não conseguiu finalizar a sua compra 🙁."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
             }
           ]
-        },
-        "fallbackOutput": 3
+        }
       },
-      "id": "5b5b7c8f-16ff-463f-8ed1-84500a1ddab2",
-      "name": "RESPOSTAS LISTAS - CONTINUAÇÃO",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
+      "id": "7e8b8140-b202-4c76-a5a9-1dc797d23e72",
+      "name": "Msg Carrinho Abandonado1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
       "position": [
-        860,
-        1340
+        660,
+        920
       ]
     },
     {
       "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
-        "jsonParameters": true,
+        "url": "https://api.dw-api.com/send",
         "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Resumos do Will\\n1. Cirurgia\\n2. Dentistica\\n3. Endodontia\\n4. Periodontia\\n5. Emergências médicas no consultório\\n6. Urgências odontológicas\\n7. Farmacologia\\n8. Radiologia\\n9. Prótese parcial removível\\n\\n10. Prótese total\\n11. Prótese fixa\\n12. Prontuário odontológico\\n13. Anestesiologia\\n14. Interpretação de achados radiográficas\\n15. Terapêutica medicamentosa para dentistas\\n16. Cariologia\\n17. Oclusão e DTM\\n18. Estomatologia e patologia oral\\n19. Doenças crônicas não transmissível\\n20. Fisiologia e anatomia humana\\n21. Materiais dentários\\n22. Pediatria\\n23. SUS e Saúde coletiva\\n24. Anatomia dentária\\n25. Ortodontia\\n26. Implantodontia (16/10)\\n\\nBÔNUS 1: planner de estudo, planner semanal e planner mensal.\\nBÔNUS 2: passo a passo do TCC descomplicado.\\nBÔNUS 3: cronograma detalhado de todas as matérias do curso no Trello.\\nBÔNUS 4: e-book - Como fechar orçamentos odontológicos.\\nBÔNUS 5: e-book - método cliente vendedor.\"\n}"
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Uhuul, {{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}} 🥳\n\nSeu pedido acabou de ir para nosso setor de fabricação!\n\nVocê terá atualizações em breve."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
       },
-      "id": "3c619ff9-e393-4008-9e04-1462214ca520",
-      "name": "MSG IMPLATAÇÃO",
+      "id": "513b783f-92af-4c5d-9648-4976156b271e",
+      "name": "Msg Produto em Separação1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        1320,
+        1680,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Oi, {{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}!\n\nO código de rastreio do seu pedido é {{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"track_code\"]}} e ele já está em transporte! ✈️📦\n\nVocê pode acompanhar a entrega por aqui 👇: \nhttps://melhorrastreio.com.br/rastreio/{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"track_code\"]}}."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "74bca891-3579-4d64-b392-020a387248ed",
+      "name": "Msg Em Transporte1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}, vimos aqui que seu pedido foi *Entregue*.\nEsperamos que goste! E não esqueça de nos marcar no instagram @leid.com.br."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "91db61ec-d28b-4e6b-8d8c-0de59a0fab6b",
+      "name": "Msg Entregue1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Se quiser tentar novamente, basta clicar no link abaixo ou caso esteja com dúvidas,\nbasta responder essa mensagem, que nossa gerente Dora vai lhe ajudar."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "a2ba2b87-17e8-481d-9b37-3c372a1cfae7",
+      "name": "Msg Carrinho Abandonado2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        920,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"simulate_url\"]}}"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "e6ecc18e-fa37-4425-9467-702679e508aa",
+      "name": "Msg Carrinho Abandonado3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1240,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}, seu pedido chegou ao nosso escritório! 🤩"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "aaec801d-6390-4c61-83d1-a5afd3c59eae",
+      "name": "Msg PRONTO P ENVIO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1680,
         1300
       ]
     },
     {
       "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
-        "jsonParameters": true,
+        "url": "https://api.dw-api.com/send",
         "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Tudo bem, já direcionei você para um atendente\"\n}"
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=✅ Seu pagamento foi confirmado e daremos sequência ao seu pedido."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
       },
-      "id": "2600128d-e51e-422b-967d-0bfc1898e796",
-      "name": "MSG IMPLATAÇÃO1",
+      "id": "3563c2d3-85bb-41e5-a465-52321aebeca9",
+      "name": "Msg Pedido Aprovado",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        1320,
-        1520
+        920,
+        580
       ]
     },
     {
       "parameters": {
-        "requestMethod": "POST",
-        "url": "=https://api.z-api.io/instances/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"instancia\"]}}/token/{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"token\"]}}/send-text",
-        "jsonParameters": true,
+        "url": "https://api.dw-api.com/send",
         "options": {},
-        "bodyParametersJson": "={\n  \"phone\": \"{{$node[\"TEXTO - BOTÃO - LISTA\"].json[\"numero\"]}}\",\n  \"message\": \"Pode! Cada um separadamente é R$ 27 reais, eu recomendo adquirir o KIT com todos os 26 resumos, atualizações semanais e os 5 bônus exclusivos na promoção de semana de provas por R$97 reais. Se ainda sim quiser separadamente, quais você quer?\"\n}"
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Não se preocupe, pois estamos cuidando de tudo para você. Qualquer dúvida, estamos a disposição. 💚"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
       },
-      "id": "cb458d6f-e9b7-44ff-9868-68a61a17ed01",
-      "name": "MSG INDIVIDUAL",
+      "id": "4aa655b1-23bd-40f3-92a2-7564c9ac361a",
+      "name": "Msg Pedido Aprovado2",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        860,
-        480
+        1240,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Já estamos embalando com todo amor e carinho 🥰\n\nEm breve, você receberá o código de rastreio para acompanhamento. 📍"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "fdd1a50a-2e63-4109-b485-54fd2dbf9d32",
+      "name": "Msg PRONTO P ENVIO1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1960,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Ahh, e não se esqueça de fazer um comentário com foto em no nosso site!"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "e2ec79cf-35bc-474d-afd2-451bd0a6ad3f",
+      "name": "Msg Entregue",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1980,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Você garante 5% de desconto na sua próxima compra. 💚"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "1cdc4da1-16ba-42e8-b9a2-f13510979ba5",
+      "name": "Msg Entregue2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2260,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}, poxa vida ..."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "67e488d2-9c09-4665-b284-c0b3632052de",
+      "name": "Msg não aprovado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        2060
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Vimos aqui que seu pedido não foi aprovado 😔"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "597cf525-168e-436b-bd02-0593baa21384",
+      "name": "Msg não aprovado1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        660,
+        2060
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Responde aqui que vamos gerar um link personalizado pra você, combinado?"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "c9a10fcd-c19c-424a-8729-329b10be64af",
+      "name": "Msg não aprovado2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        920,
+        2060
       ]
     },
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "ws-atendimento",
+        "path": "/leid-principal",
         "options": {}
       },
-      "id": "9be81451-586e-44ab-8bf5-e686664a9113",
-      "name": "Webhook",
+      "id": "d39c63ce-22ba-4e74-b863-5b74d3ee4d9c",
+      "name": "START YAMPI",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
       "position": [
-        -1220,
-        980
+        -240,
+        1500
       ],
-      "webhookId": "9b8777fe-d25e-43c3-a6af-756546d30342"
+      "webhookId": "8b1b0605-e51d-4eb9-bb1a-991a975d020e"
+    },
+    {
+      "parameters": {
+        "amount": 4,
+        "unit": "days"
+      },
+      "id": "0aa654f5-5cd7-49a0-8beb-8c7275674d75",
+      "name": "4 dias",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        1060
+      ],
+      "webhookId": "15c4623b-7cf2-4af8-933d-8fc67578bea2"
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "days"
+      },
+      "id": "d539f888-1acd-4db3-a89d-3e71b86df8e5",
+      "name": "3 dias",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2460,
+        1060
+      ],
+      "webhookId": "5ebbbfa0-7a29-48c7-a736-bcf6b7f4632f"
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "= {{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}} temos novidades sobre o seu pedido! 💚\n\nEle se encontra no setor de corte ✂️"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "15c7edc8-fc55-4d84-a8ae-1ca5c37816b7",
+      "name": "CORTE",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2180,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=👀 Tá ansiosa né?  Mas não se preocupa seu pedido acabou de entrar no processo de montagem!\n\nEstamos montando com todo amor e carinho pra chegar como você espera 💚"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "c289bc21-b32a-453e-a874-7c49b8397b07",
+      "name": "MONTAGEM",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2700,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}, você não sabe?!  🥰\n\nSeu pedido já está no setor de acabamento! Legal né?"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "28a34f66-d77a-4931-beeb-7ea5a09c670c",
+      "name": "ACABAMENTO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3160,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 4,
+        "unit": "days"
+      },
+      "id": "b2ce0879-5178-431b-9cbf-25c78b8cfcda",
+      "name": "4 dias -",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2920,
+        1060
+      ],
+      "webhookId": "00c7b5d2-5942-4829-814c-718c3ab9f288"
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "days"
+      },
+      "id": "5be1c396-7f67-4a78-864e-68cd6b543d88",
+      "name": "3 dias -",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        3440,
+        1060
+      ],
+      "webhookId": "bcca1472-29d7-48cd-914b-7287b29969ef"
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Seu pedido ficou pronto, e já está a caminho de nosso escritório!"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "b617941e-4864-4f77-9faf-70afa4f8ac90",
+      "name": "ESCRITÓRIO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3680,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "/leid-bpix",
+        "options": {}
+      },
+      "id": "8d2c7a5a-346d-47df-b635-0ff7ecc76d6f",
+      "name": "START YAMPI - BOLETO E PIX",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        2780
+      ],
+      "webhookId": "8b1b0605-e51d-4eb9-bb1a-991a975d020e"
+    },
+    {
+      "parameters": {},
+      "id": "5dd4b5e8-12b2-4259-a77e-683811691dfc",
+      "name": "NoOp",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        40,
+        3040
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"body\"][\"event\"]}}",
+              "value2": "order.created"
+            }
+          ]
+        }
+      },
+      "id": "541e5460-0cba-40e7-9137-802b992dc989",
+      "name": "CONFERÊNCIA SE É BOLETO OU PIX",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        2780
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"payments\"][0][\"alias\"]}}",
+              "value2": "pix"
+            }
+          ]
+        }
+      },
+      "id": "27be6ee7-b1b8-472d-ba7a-03ac3f8c0d7d",
+      "name": "1 - PIX / 2 - BOLETO",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        200,
+        2740
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Ooi, {{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}!\n\nVi aqui que você está comprando via pix 💚"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "4a9a21b2-b887-4a43-8a0b-d3c79e2fc266",
+      "name": "Msg PIX 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        540,
+        2720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Segue abaixo o pix copia e cola! *Lembrando que ele só é válido por 30 minutos ok?*"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "5ff1e667-e350-41a0-9840-3ad685ee55cc",
+      "name": "Msg PIX 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        800,
+        2720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"transactions\"][\"data\"][0][\"metadata\"][\"data\"][\"pix_qr_code\"]}}"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "b6753fef-1a6f-4603-a35c-957ad89a03ec",
+      "name": "Msg PIX 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        2720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Ooi, {{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"first_name\"]}}!\n\nVi aqui que você está comprando via boleto 💚"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "b53c8bfe-fe5c-44a2-9dd8-e2288355aee8",
+      "name": "Msg BOLETO 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        500,
+        3020
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "=Vou te passar duas opções de pagamento tá bem? A primeira é o link para o seu boleto e a segunda é seu código de barras."
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "30eb4559-ec9a-4c1e-9c02-a4cbc26f027b",
+      "name": "MSG BOLETO 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        760,
+        3020
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"transactions\"][\"data\"][0][\"billet_url\"]}}"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "580cc2a2-ef81-4e7c-a9bf-31f220e2778c",
+      "name": "MSG BOLETO 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1020,
+        3020
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.dw-api.com/send",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "receiver",
+              "value": "=55{{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"phone\"][\"full_number\"]}}"
+            },
+            {
+              "name": "msgtext",
+              "value": "={{$node[\"START YAMPI - BOLETO E PIX\"].json[\"body\"][\"resource\"][\"transactions\"][\"data\"][0][\"billet_barcode\"]}}"
+            },
+            {
+              "name": "sender",
+              "value": "558188550851"
+            },
+            {
+              "name": "token",
+              "value": "u3MzhRbQ3PKw0ySP2czj"
+            }
+          ]
+        }
+      },
+      "id": "105dd834-e717-4278-9d2e-83959089cd22",
+      "name": "MSG BOLETO ",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1260,
+        3020
+      ]
     }
   ],
   "pinData": {},
@@ -586,19 +1517,19 @@
   "staticData": null,
   "tags": [
     {
-      "createdAt": "2022-12-01T03:20:57.770Z",
-      "updatedAt": "2022-12-01T03:20:57.770Z",
-      "id": "3",
-      "name": "WILLIAM SANTOS 🦷"
+      "createdAt": "2022-12-01T03:26:19.469Z",
+      "updatedAt": "2022-12-01T03:26:19.469Z",
+      "id": "5",
+      "name": "YAMPI 💜"
     },
     {
-      "createdAt": "2022-12-01T03:20:57.770Z",
-      "updatedAt": "2022-12-01T03:20:57.770Z",
-      "id": "4",
-      "name": "ROBÔS 🤖"
+      "createdAt": "2022-12-01T03:26:19.470Z",
+      "updatedAt": "2022-12-01T03:26:19.470Z",
+      "id": "6",
+      "name": "LEID 👸🏻"
     }
   ],
-  "triggerCount": 0,
-  "updatedAt": "2022-12-01T03:26:41.000Z",
-  "versionId": "e45eee98-ab8c-4400-877e-b7c96c3ca103"
+  "triggerCount": 2,
+  "updatedAt": "2023-01-21T01:33:29.000Z",
+  "versionId": "527599c5-ceab-4909-88e1-94c8e6f32056"
 }
