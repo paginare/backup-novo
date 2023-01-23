@@ -1,0 +1,633 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "NoOp",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "IF2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "NoOp1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PEDIDOS.PESQUISA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML1": {
+      "main": [
+        [
+          {
+            "node": "PEDIDOS.OBTER",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF2": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NoOp2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML2": {
+      "main": [
+        [
+          {
+            "node": "ENVIA FLASH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PEDIDOS.OBTER": {
+      "main": [
+        [
+          {
+            "node": "XML2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PEDIDOS.PESQUISA": {
+      "main": [
+        [
+          {
+            "node": "XML1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ENVIA FLASH": {
+      "main": [
+        [
+          {
+            "node": "ENVIA WPP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ENVIA WPP": {
+      "main": [
+        [
+          {
+            "node": "FACILITA - 5seg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FACILITA - 5seg": {
+      "main": [
+        [
+          {
+            "node": "ATUALIZA RASTREIO NA YAMPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CAPTURA HORA": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ATUALIZA RASTREIO NA YAMPI": {
+      "main": [
+        [
+          {
+            "node": "CAPTURA HORA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "FACILITA - 5seg1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-20T14:11:56.676Z",
+  "id": "24",
+  "name": "TINY <> FLASH",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "tiny2",
+        "options": {}
+      },
+      "id": "b00772fc-fe26-4945-b808-8776cb58cbe1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        260,
+        300
+      ],
+      "webhookId": "13090537-2d6c-4aa1-a0a0-a289bcaf00d6"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"body\"][\"tipo\"] }}",
+              "value2": "inclusao_pedido"
+            }
+          ]
+        }
+      },
+      "id": "dc4acbc3-fe87-4c60-a720-f3410b230775",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        520,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "3bc7d35e-40ca-4ec7-9b7b-878e823c144c",
+      "name": "NoOp",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        820,
+        -20
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"body\"][\"dados\"][\"formaEnvio\"][\"descricao\"] }}",
+              "operation": "notEqual",
+              "value2": "FLASH"
+            }
+          ]
+        }
+      },
+      "id": "ff231bdb-cd92-4830-94b8-e1f596b41360",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        460
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "3ada9845-1769-4258-9ef7-3f18781ed30e",
+      "name": "NoOp1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "7cdaff36-90c6-4680-b4b3-98a509fb33d4",
+      "name": "XML1",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"body\"][\"dados\"][\"codigoSituacao\"] }}",
+              "value2": "preparando_envio"
+            }
+          ]
+        }
+      },
+      "id": "86559bdf-4b51-483a-b51a-815e6302e7d9",
+      "name": "IF2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        760,
+        480
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b6ca99f5-b86d-437c-93d1-b0eaf5c65245",
+      "name": "NoOp2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "ebd5f715-82d0-4720-ac8f-9cb6d1a1c836",
+      "name": "XML2",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        2300,
+        540
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedido.obter.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "id",
+              "value": "={{ $json[\"retorno\"][\"pedidos\"][\"pedido\"][\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1b47b8da-90a8-4d78-8fd2-e8eeafb5044f",
+      "name": "PEDIDOS.OBTER",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2040,
+        540
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedidos.pesquisa.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "numero",
+              "value": "={{$json[\"body\"][\"dados\"][\"numero\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7bfd3eca-dd7f-4b9f-9830-3322c55fa1c6",
+      "name": "PEDIDOS.PESQUISA",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.z-api.io/instances/3B48C7326F379034A66A166F1EEA881D/token/2F52D4F1825B0781CD772716/send-text",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\"phone\":\"55{{$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}\",\n\"message\":\"Que legal {{$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"nome\"].split(\" \")[0]}}, seu Rosa já está indo até você! Estamos com seu pedido em processamento e aqui está seu código de rastreio: *{{$node[\"Webhook\"].json[\"body\"][\"dados\"][\"numero\"]}}*. É só acessar esse link e acompanhar tudo!\\nMas atenção, o período para o pacote aparecer no sistema é de até 48h, tá?!\\n\\nAté lá, você pode olhar esse vídeo explicando como rastrear sua encomenda. \\nQualquer dúvida, fala com a gente! 🥰\\n\\n\\nhttps://www.flashcourier.com.br/rastreio/{{$node[\"Webhook\"].json[\"body\"][\"dados\"][\"numero\"]}}\"\n}",
+        "options": {}
+      },
+      "id": "b980979f-7f8b-48db-a06c-e45f96f69438",
+      "name": "ENVIA WPP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2760,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://webservice.flashpegasus.com.br/FlashPegasus/rest/padrao/importacao",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "=[{\n\"cliente_id\":7123,\n\"ctt_id\":9160,\n\"dna_hawb\":7,\n\"ccusto_id\":37138,\n\"tipo_enc_id\":21066,\n\"prod_flash_id\":157,\n\"frq_rec_id\":\"DSP\",\n\"ctt_ter_id\":null,\n\"tipo_merc_id\":null,\n\"num_enc_cli\":\"{{$json[\"retorno\"][\"pedido\"][\"numero\"]}}\",\n\"num_enc_ter\":\"\",\n\"num_cliente\":\"{{$json[\"retorno\"][\"pedido\"][\"numero\"]}}\",\n\"nome_rem\":\"LUCAS COMESTICOS LTDA\",\n\"endHawbs\":{\n\"nome_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"nome\"]}}\",\n\"logr_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"endereco\"]}}\",\n\"bairro_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"bairro\"]}}\",\n\"num_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"numero\"]}}\",\n\"compl_end_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"complemento\"]}}\",\n\"cid_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"cidade\"]}}\",\n\"uf_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"uf\"]}}\",\n\"cep_dest\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"cep\"].replace(/\\D/g,'')}}\",\n\"fone1_des\":\"{{$json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des\":\"\",\n\"cod_lote\":\"11112022\",\n\"peso_aferido\":null,\n\"peso_declarado\":0.03,\n\"qtde_itens\":\"1.0\",\n\"valor\": {{$json[\"retorno\"][\"pedido\"][\"total_pedido\"]}},\n\"endHawbs2\":{\n\"nome_des\":\"\",\n\"logr_dest\":\"\",\n\"bairro_des\":\"\",\n\"num_des\":\"\",\n\"compl_end_dest\":\"\",\n\"cid_dest\":\"\",\n\"uf_dest\":\"\",\n\"cep_dest\":null,\n\"fone1_des\":\"\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des_2\":\"\",\n\"id_local_rem\":39962,\n\"cpf_des\":\"82339822025\",\n\"cnpj_des\":\"\",\n\"ie_des\":\"\",\n\"email_des\":\"email@teste.com\",\n\"obs1\": \"\",\n\"obs2\": \"\",\n\"obs3\": \"\",\n\"obs4\": \"\",\n\"ge1\":\"\",\n\"ge2\":\"\",\n\"ge3\":\"\",\n\"ge4\":\"\",\n\"chave_nf\":\"31211018981084000157550010000001781748827596\"\n}]",
+        "options": {}
+      },
+      "id": "1788aa82-53ee-478e-8fe0-0d039cd83ab7",
+      "name": "ENVIA FLASH",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2540,
+        540
+      ],
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "3",
+          "name": "Unnamed credential"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}"
+            },
+            {
+              "name": "msg",
+              "value": "=Seu pedido esta a caminho da transportadora. Rastreie pelo link abaixo\nhttps://www.flashcourier.com.br/rastreio/{{$node[\"Webhook\"].json[\"body\"][\"dados\"][\"numero\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "539ef680-7ab2-4d19-b4e0-aa5d6336ea7b",
+      "name": "FACILITA - 5seg",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        3000,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg",
+          "mode": "list",
+          "cachedResultName": "novos flash",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1032730729,
+          "mode": "list",
+          "cachedResultName": "ENVIADOS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AreRIPCmiDxSZBF02GvqRIt_Hn8yyW0dn8_D554HsMg/edit#gid=1032730729"
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "PEDIDO TINY",
+              "fieldValue": "={{ $node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"numero\"] }}"
+            },
+            {
+              "fieldId": "TXT FLASH",
+              "fieldValue": "={{ $node[\"ENVIA FLASH\"].json[\"arquivo\"] }}"
+            },
+            {
+              "fieldId": "NOME",
+              "fieldValue": "={{ $node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"nome\"] }}"
+            },
+            {
+              "fieldId": "DATA DO ENVIO",
+              "fieldValue": "={{$node[\"CAPTURA HORA\"].json[\"date\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "98395a05-19e6-452c-99a6-0600c62da0c8",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        3820,
+        540
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "value": "={{new Date()}}",
+        "dataPropertyName": "date",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY HH:MM:SS",
+        "options": {
+          "fromTimezone": "UTC",
+          "toTimezone": "America/Recife"
+        }
+      },
+      "id": "4790f499-1cc9-4d25-be7e-12046e67c6b9",
+      "name": "CAPTURA HORA",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        3560,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://api.dooki.com.br/v2/rosaselvagem/orders/{{ $item(\"0\").$node[\"Webhook\"].json[\"body\"][\"dados\"][\"idPedidoEcommerce\"] }}",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "track_code",
+              "value": "={{$node[\"Webhook\"].json[\"body\"][\"dados\"][\"numero\"]}}"
+            },
+            {
+              "name": "track_url",
+              "value": "=https://www.flashcourier.com.br/rastreio/{{$node[\"Webhook\"].json[\"body\"][\"dados\"][\"numero\"]}}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "db7a834843aefc263fc37e429e2075a2ecc081a9"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_85xpIquUrIky4xXTm1KdRFT5PovlNat9b4F73"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e73b02e6-07a0-4f54-bd9c-442df455a655",
+      "name": "ATUALIZA RASTREIO NA YAMPI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        3280,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "=84981521797"
+            },
+            {
+              "name": "msg",
+              "value": "=Enviado tiny"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a4e9098f-4198-49c8-a455-25c68868c4b7",
+      "name": "FACILITA - 5seg1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        4040,
+        500
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "any"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    },
+    {
+      "createdAt": "2022-12-01T03:20:57.770Z",
+      "updatedAt": "2022-12-01T03:20:57.770Z",
+      "id": "4",
+      "name": "ROBÔS 🤖"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-21T23:29:24.000Z",
+  "versionId": "2ee04b2d-6750-4ff0-b51e-58d7b9e0834e"
+}
