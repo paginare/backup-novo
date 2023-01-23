@@ -1,0 +1,60 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-01-22T04:58:04.475Z",
+  "id": "39",
+  "name": "VERIFICA LICENÇA",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "9e85e4e7-2ccb-46af-9fbf-a19e30ab210c",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "bf4a78e4-caf9-42de-ad40-5e6fa6fab7ae",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        580,
+        300
+      ],
+      "webhookId": "9e85e4e7-2ccb-46af-9fbf-a19e30ab210c"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\"valid\":\"true\"}",
+        "options": {}
+      },
+      "id": "0bce6cd9-8fed-47f7-aacf-196d1b96f917",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        920,
+        300
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-22T04:58:51.000Z",
+  "versionId": "778e9163-bb06-4a42-96b7-e4437f9ea80a"
+}
