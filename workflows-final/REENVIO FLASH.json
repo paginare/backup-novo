@@ -1,0 +1,225 @@
+{
+  "active": false,
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches": {
+      "main": [
+        [
+          {
+            "node": "Baserow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-19T17:39:04.419Z",
+  "id": "23",
+  "name": "REENVIO FLASH",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://webservice.flashpegasus.com.br/FlashPegasus/rest/padrao/importacao",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "=[{\n\"cliente_id\":7123,\n\"ctt_id\":9160,\n\"dna_hawb\":7,\n\"ccusto_id\":37138,\n\"tipo_enc_id\":21066,\n\"prod_flash_id\":157,\n\"frq_rec_id\":\"DSP\",\n\"ctt_ter_id\":null,\n\"tipo_merc_id\":null,\n\"num_enc_cli\":\"{{$json[\"NUMERO PEDIDO\"]}}\",\n\"num_enc_ter\":\"\",\n\"num_cliente\":\"{{$json[\"NUMERO PEDIDO\"]}}\",\n\"nome_rem\":\"LUCAS COMESTICOS LTDA\",\n\"endHawbs\":{\n\"nome_des\":\"{{$json[\"FULL NAME\"]}}\",\n\"logr_dest\":\"{{$json[\"RUA\"]}}\",\n\"bairro_des\":\"{{$json[\"BAIRRO\"]}}\",\n\"num_des\":\"{{$json[\"NUMERO\"]}}\",\n\"compl_end_dest\":\"{{$json[\"COMPLEMENTO\"]}}\",\n\"cid_dest\":\"{{$json[\"CIDADE\"]}}\",\n\"uf_dest\":\"{{$json[\"UF\"]}}\",\n\"cep_dest\":\"{{$json[\"CEP\"]}}\",\n\"fone1_des\":\"{{$json[\"FONE\"]}}\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des\":\"\",\n\"cod_lote\":\"11112022\",\n\"peso_aferido\":null,\n\"peso_declarado\":0.03,\n\"qtde_itens\":\"1.0\",\n\"valor\": {{$json[\"VALOR\"]}},\n\"endHawbs2\":{\n\"nome_des\":\"\",\n\"logr_dest\":\"\",\n\"bairro_des\":\"\",\n\"num_des\":\"\",\n\"compl_end_dest\":\"\",\n\"cid_dest\":\"\",\n\"uf_dest\":\"\",\n\"cep_dest\":null,\n\"fone1_des\":\"\",\n\"fone2_des\":\"\",\n\"fone3_des\":\"\"\n},\n\"depto_des_2\":\"\",\n\"id_local_rem\":39962,\n\"cpf_des\":\"82339822025\",\n\"cnpj_des\":\"\",\n\"ie_des\":\"\",\n\"email_des\":\"email@teste.com\",\n\"obs1\": \"\",\n\"obs2\": \"\",\n\"obs3\": \"\",\n\"obs4\": \"\",\n\"ge1\":\"\",\n\"ge2\":\"\",\n\"ge3\":\"\",\n\"ge4\":\"\",\n\"chave_nf\":\"31211018981084000157550010000001781748827596\"\n}]",
+        "options": {}
+      },
+      "id": "57107315-babe-46cd-b032-a8ba7855654b",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        260
+      ],
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "3",
+          "name": "Unnamed credential"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "803cbf62-08bb-469f-8a7b-7331d391f058",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Z6Ap_JnTrdU9Lb8J08hatgXob882_0Zw0HsAUFpAIac",
+          "mode": "list",
+          "cachedResultName": "PEDIDOS FLASH",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Z6Ap_JnTrdU9Lb8J08hatgXob882_0Zw0HsAUFpAIac/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Z6Ap_JnTrdU9Lb8J08hatgXob882_0Zw0HsAUFpAIac/edit#gid=0"
+        },
+        "options": {}
+      },
+      "id": "72ccfa3a-e5f6-42ab-8812-bbb649d32c32",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        140,
+        260
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "databaseId": 76,
+        "tableId": 432,
+        "limit": 1,
+        "additionalOptions": {
+          "filters": {
+            "fields": [
+              {
+                "field": 3760,
+                "value": "={{ $json[\"PEDIDO\"] }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "be1272f0-ceeb-41a4-be6d-3afef8213d77",
+      "name": "Baserow",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        580,
+        260
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "1",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "431f652f-3137-4fb7-9c07-c985947b38d7",
+      "name": "SplitInBatches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        360,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "41329099-c9dc-43d3-aff7-115c6c218684",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        260
+      ],
+      "webhookId": "3bcc4041-630a-434a-ac2a-cb6fda838af2"
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    },
+    {
+      "createdAt": "2022-12-01T03:20:57.770Z",
+      "updatedAt": "2022-12-01T03:20:57.770Z",
+      "id": "4",
+      "name": "ROBÔS 🤖"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-21T02:52:58.000Z",
+  "versionId": "bf5a2417-050b-4ff6-bcb9-0f8053839f0b"
+}
