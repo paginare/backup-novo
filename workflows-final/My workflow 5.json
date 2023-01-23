@@ -1,0 +1,52 @@
+{
+  "active": false,
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-21T20:05:05.516Z",
+  "id": "26",
+  "name": "My workflow 5",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "10b3e8b8-cdb1-4da4-83e8-dc7d287cf936",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        640,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": "25"
+      },
+      "id": "774c99a0-84ed-4c17-92d0-2df2cdf69a26",
+      "name": "Execute Workflow",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        920,
+        300
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-21T20:05:05.516Z",
+  "versionId": "3e5439fe-7413-484b-9348-b678f96c7820"
+}
