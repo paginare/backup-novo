@@ -1,0 +1,78 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Customer Datastore (n8n training)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Customer Datastore (n8n training)": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-01-20T05:27:57.819Z",
+  "id": "35",
+  "name": "My workflow 6",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "23205fbb-cc72-4901-b0e6-c2164b53f125",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        340,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://tidy-zebra-99.hooks.n8n.cloud/webhook/e19d5032-40ba-4d0e-b888-d24a86e8afae",
+        "options": {}
+      },
+      "id": "165b3cf3-733b-49c4-a0d5-9044f2cd698c",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        900,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAllPeople",
+        "returnAll": true
+      },
+      "id": "aa3440c5-781b-471a-b58a-49d6a16f0966",
+      "name": "Customer Datastore (n8n training)",
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "typeVersion": 1,
+      "position": [
+        620,
+        300
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-01-20T05:27:57.819Z",
+  "versionId": "165f1c5f-eea2-43ad-b105-f60a80d1d03e"
+}
