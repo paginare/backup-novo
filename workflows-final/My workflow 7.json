@@ -1,0 +1,98 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-01-22T00:34:52.706Z",
+  "id": "38",
+  "name": "My workflow 7",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "bcf89b6c-f88e-49de-b3ea-98f447663742",
+        "options": {}
+      },
+      "id": "0d01cbb5-bbb3-4e5e-9923-3e723e7b0b4f",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        440,
+        300
+      ],
+      "webhookId": "bcf89b6c-f88e-49de-b3ea-98f447663742"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1CL-wBUuMgp-STN0vbW3hREZHo4WbnLTNCkTk2CNd0bQ",
+          "mode": "list",
+          "cachedResultName": "PROMOTORAS 2023",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CL-wBUuMgp-STN0vbW3hREZHo4WbnLTNCkTk2CNd0bQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CL-wBUuMgp-STN0vbW3hREZHo4WbnLTNCkTk2CNd0bQ/edit#gid=0"
+        },
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "NOME DA PROMOTORA",
+              "fieldValue": "={{ $item(\"0\").$node[\"Webhook\"].json[\"body\"][\"No Label name\"] }}"
+            },
+            {
+              "fieldId": "PRODUTOS",
+              "fieldValue": "={{ $item(\"0\").$node[\"Webhook\"].json[\"body\"][\"No Label field_ff3b08c\"] }}"
+            },
+            {
+              "fieldId": "FARMÁCIA",
+              "fieldValue": "={{ $item(\"0\").$node[\"Webhook\"].json[\"body\"][\"No Label field_b87532b\"] }}"
+            },
+            {
+              "fieldId": "LINK FOTO DO CUPOM",
+              "fieldValue": "={{ $item(\"0\").$node[\"Webhook\"].json[\"body\"][\"FOTO DO CUPOM FISCAL\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "82b4a578-e820-4fb3-9716-58bb8ec2ee85",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        760,
+        300
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-22T00:42:24.000Z",
+  "versionId": "7ce0f92e-4722-4856-9e22-256c8e827b94"
+}
