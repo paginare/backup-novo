@@ -1,0 +1,154 @@
+{
+  "active": false,
+  "connections": {
+    "CAPTURA HORA": {
+      "main": [
+        [
+          {
+            "node": "FTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RECEBE PEDIDO YAMPI": {
+      "main": [
+        [
+          {
+            "node": "VERIFICA SE É DA FLASH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "VERIFICA SE É DA FLASH": {
+      "main": [
+        [
+          {
+            "node": "CAPTURA HORA",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NoOp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-01T03:20:43.571Z",
+  "id": "3",
+  "name": "FLASH COURRIER",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "27bdef96-e83a-4139-b8c8-e09d0c6474b0",
+      "name": "NoOp",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        640,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{new Date()}}",
+        "dataPropertyName": "date",
+        "custom": true,
+        "toFormat": "DDMMYYYYHHmmss",
+        "options": {
+          "fromTimezone": "UTC",
+          "toTimezone": "America/Recife"
+        }
+      },
+      "id": "716955ef-f81d-4013-947f-35d2ffcc2f97",
+      "name": "CAPTURA HORA",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        640,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "flash-courrier",
+        "options": {}
+      },
+      "id": "58e6f415-3de9-4289-8615-09b1d797d471",
+      "name": "RECEBE PEDIDO YAMPI",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        100,
+        300
+      ],
+      "webhookId": "dbd7d40a-0928-4bda-a3ca-0a13365f216f"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"body\"][\"resource\"][\"shipment_service\"] }}",
+              "value2": "FRETE_PADRAO"
+            }
+          ]
+        }
+      },
+      "id": "189c15fb-b538-4272-8ef7-f5af499ee07f",
+      "name": "VERIFICA SE É DA FLASH",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        380,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "protocol": "sftp",
+        "operation": "upload",
+        "path": "=/remessa/ROSASELVAGEM_{{$node[\"CAPTURA HORA\"].json[\"date\"]}}.txt",
+        "binaryData": false,
+        "fileContent": "={{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"number\"]}};{{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"number\"]}};{{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"generic_name\"]}};{{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"street\"]}};{{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"number\"]}};{{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"complement\"]}};{{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"neighborhood\"]}};4360050;{{ $item(\"0\").$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"city\"] }};{{ $item(\"0\").$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"shipping_address\"][\"data\"][\"state\"] }};;;{{$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"transactions\"][\"data\"][0][\"amount\"]}};;;{{ $item(\"0\").$node[\"RECEBE PEDIDO YAMPI\"].json[\"body\"][\"resource\"][\"customer\"][\"data\"][\"cpf\"] }};;;;;"
+      },
+      "id": "54dc95ec-449b-45f7-ac65-c6851d46ccc1",
+      "name": "FTP",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        860,
+        160
+      ],
+      "credentials": {
+        "sftp": {
+          "id": "2",
+          "name": "SFTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-01T15:07:25.000Z",
+  "versionId": "c5429bd0-0dd0-432b-b111-7b0e7068a9b6"
+}
