@@ -1,0 +1,699 @@
+{
+  "active": true,
+  "connections": {
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "XML1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML1": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split In Batches": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "XML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "SMS 1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SMS 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "IF2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF2": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "XML2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML2": {
+      "main": [
+        [
+          {
+            "node": "IF4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF3": {
+      "main": [
+        [
+          {
+            "node": "SMS - 2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SMS 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF4": {
+      "main": [
+        [
+          {
+            "node": "IF3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-01-17T21:53:54.403Z",
+  "id": "34",
+  "name": "RASTREIO VIA CPF",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "91670299-1a0f-407e-b1be-9e7ef33382b5",
+        "options": {}
+      },
+      "id": "2944f101-4131-4653-b9c5-c9e414fb9d4c",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        60,
+        140
+      ],
+      "webhookId": "91670299-1a0f-407e-b1be-9e7ef33382b5"
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedidos.pesquisa.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "cpf_cnpj",
+              "value": "={{ $json[\"body\"][\"No Label name\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0317a494-8cf3-46ce-904d-567a7acc7c4c",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        300,
+        140
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "87e1f860-0ae8-419e-af70-9f512471f6ce",
+      "name": "XML1",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        540,
+        140
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "=retorno.pedidos.pedido",
+        "options": {}
+      },
+      "id": "34a77e29-eebc-45e2-870c-23d2c3e35bd0",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        -300
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "06c10614-6903-45a1-9b58-df0ddbd484fe",
+      "name": "Split In Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        -300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"situacao\"] }}",
+              "operation": "contains",
+              "value2": "Enviado"
+            },
+            {
+              "value1": "={{ $json[\"situacao\"] }}",
+              "value2": "Pronto para envio"
+            },
+            {
+              "value1": "={{ $json[\"situacao\"] }}",
+              "value2": "Entregue"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "4c9e2075-f941-4fcf-928f-06cbeee8be4f",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        -300
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "75997834-0a90-4bb7-966a-7e21ab39275a",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2080,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedido.obter.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "id",
+              "value": "={{ $json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1fcda976-552f-4b36-8526-76aab5c12bb7",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2140,
+        -480
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "5f5696b4-d84c-4806-b5ec-705041d3a897",
+      "name": "XML",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        2360,
+        -480
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Split In Batches\"].json[\"codigo_rastreamento\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "253f49a3-404d-4dd0-acac-1a5adf7512dd",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2580,
+        -480
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "$input.item.json.isArray = Array.isArray($json[\"retorno\"][\"pedidos\"][\"pedido\"]);\nreturn $input.item;"
+      },
+      "id": "d63a4ed4-75a7-483c-8d3f-60ec58dee286",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        800,
+        140
+      ],
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"isArray\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "332fefd4-05bb-4a71-b50b-d231cc930dae",
+      "name": "IF2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.tiny.com.br/api2/pedido.obter.php",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "497ea1c57672a427d51c18e147a95105105baa2c"
+            },
+            {
+              "name": "id",
+              "value": "={{ $node[\"XML1\"].json[\"retorno\"][\"pedidos\"][\"pedido\"][\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6c752af0-825b-4b4b-ae06-b59b617b2326",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1320,
+        500
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "61566a70-5bf4-4d58-96b5-6fa53f8222dd",
+      "name": "XML2",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        500
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Split In Batches\"].json[\"codigo_rastreamento\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "3ecff822-e29c-4cd2-b67d-f8b22e3bc061",
+      "name": "IF3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2060,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{ $item(\"0\").$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}"
+            },
+            {
+              "name": "msg",
+              "value": "=Rosa Selvagem: Rastreie pelo link abaixo\n{{ $item(\"0\").$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"url_rastreamento\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4e2deab4-b142-4cce-86aa-bb16091bbcdf",
+      "name": "SMS - 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2320,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{ $item(\"0\").$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}"
+            },
+            {
+              "name": "msg",
+              "value": "=Rosa Selvagem: Rastreie seu pedido pelo link \nhttps://www.flashcourier.com.br/rastreio/{{ $item(\"0\").$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"numero\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d5aa087f-a08f-4e6d-8dda-64c4da2c249d",
+      "name": "SMS 4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2320,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{ $item(\"0\").$node[\"XML\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}"
+            },
+            {
+              "name": "msg",
+              "value": "=Rosa Selvagem: Rastreie seu pedido pelo link \nhttps://www.flashcourier.com.br/rastreio/{{ $node[\"Split In Batches\"].json[\"numero\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6cbc6927-e360-4191-8157-e6a55f901341",
+      "name": "SMS 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2940,
+        -380
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://api.facilitamovel.com.br/api/simpleSend.ft",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "rosaselvagem"
+            },
+            {
+              "name": "password",
+              "value": "$sTwsu^9DyObI!jd4zgEWGy"
+            },
+            {
+              "name": "destinatario",
+              "value": "={{ $item(\"0\").$node[\"XML\"].json[\"retorno\"][\"pedido\"][\"cliente\"][\"fone\"].replace(/\\D/g,'')}}"
+            },
+            {
+              "name": "msg",
+              "value": "=Rosa Selvagem: Rastreie pelo link abaixo\n{{ $item(\"0\").$node[\"Split In Batches\"].json[\"url_rastreamento\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4f0d13c1-40df-410b-9753-7a928c364884",
+      "name": "SMS 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2940,
+        -720
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $item(\"0\").$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"situacao\"] }}",
+              "operation": "contains",
+              "value2": "Enviado"
+            },
+            {
+              "value1": "={{ $item(\"0\").$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"situacao\"] }}",
+              "value2": "Pronto para envio"
+            },
+            {
+              "value1": "={{ $item(\"0\").$node[\"XML2\"].json[\"retorno\"][\"pedido\"][\"situacao\"] }}",
+              "value2": "Entregue"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "8daaeebc-bccb-457b-911e-1834c6cdbe2e",
+      "name": "IF4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        500
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "44c949f7-7940-4c55-b69b-f454c41a8b12",
+      "name": "No Operation, do nothing1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2080,
+        820
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-01-21T01:33:30.000Z",
+  "versionId": "b620697c-8079-47f1-ad86-2479ca481e0b"
+}
