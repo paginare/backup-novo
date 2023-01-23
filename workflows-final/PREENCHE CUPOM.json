@@ -1,0 +1,520 @@
+{
+  "active": false,
+  "connections": {
+    "ROSA SELVAGEM BRASIL": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists1": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ROSA SELVAGEM OFICIAL": {
+      "main": [
+        [
+          {
+            "node": "Item Lists1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists2": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ROSA SELVAGEM ÁCIDO": {
+      "main": [
+        [
+          {
+            "node": "Item Lists2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow3": {
+      "main": [
+        [
+          {
+            "node": "Baserow1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches": {
+      "main": [
+        [
+          {
+            "node": "Baserow3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow1": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches1": {
+      "main": [
+        [
+          {
+            "node": "Baserow4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow4": {
+      "main": [
+        [
+          {
+            "node": "Baserow2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow2": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "ROSA SELVAGEM ÁCIDO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches2": {
+      "main": [
+        [
+          {
+            "node": "Baserow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-12-01T03:25:46.737Z",
+  "id": "6",
+  "name": "PREENCHE CUPOM",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagem/pricing/promocodes?fields=id,code,active&limit=3000&page=1",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "973feecfab2bdbc1583e2074133810dded1cd87f"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_nztAmyKqsvtHS2PQlcwoqmP66TaSC3m0ECfS1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "69682c42-e1fc-44d1-be70-28d0d635a114",
+      "name": "ROSA SELVAGEM BRASIL",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        660,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/rosaselvagemoficial/pricing/promocodes?fields=id,code&limit=3000&page=1",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "0f68089b850eaa85ca328293f21897a611d2f7f9"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_GMRHBdr89JQxT7XyTgwCoK4Yn5qWH0aBA1HqT"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f3254f90-7073-48bc-8ab8-92d8d79b90a7",
+      "name": "ROSA SELVAGEM OFICIAL",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        820,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dooki.com.br/v2/cleanskinbr2/pricing/promocodes?fields=id,code&limit=2434&page=1",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Token",
+              "value": "5c2ecac51e4cff9986ca049da482bb6d92838969"
+            },
+            {
+              "name": "User-Secret-Key",
+              "value": "sk_9mMlLRynS02sZKA9geK4QfaRriJSZJPOv0diG"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4a01625e-0de2-48fc-9422-f0daf0996529",
+      "name": "ROSA SELVAGEM ÁCIDO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        820,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "d9df19a5-518a-4e12-80ba-3e17a2a10beb",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        960,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "databaseId": 46836,
+        "tableId": 118237,
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 753161,
+              "fieldValue": "={{ $json[\"id\"] }}"
+            },
+            {
+              "fieldId": 753160,
+              "fieldValue": "={{ $json[\"code\"] }}"
+            },
+            {
+              "fieldId": 753165,
+              "fieldValue": "={{ $json[\"active\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "a7e6f5e6-8a51-430c-ad97-f14400c0d289",
+      "name": "Baserow",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1380,
+        580
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "41df7ca8-4650-462e-ae35-40819d55033d",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118237,
+        "rowId": "={{ $json[\"id\"] }}",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 753163,
+              "fieldValue": "={{ $node[\"SplitInBatches\"].json[\"id\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "a226cbcc-0940-42b3-a840-2fe14362c806",
+      "name": "Baserow1",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        800
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "55a21983-f8c1-4e9f-99f5-366656996e27",
+      "name": "Item Lists2",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "databaseId": 46836,
+        "tableId": 118237,
+        "limit": 1,
+        "additionalOptions": {
+          "search": "={{ $json[\"code\"] }}"
+        }
+      },
+      "id": "55b09fdd-fcc2-4772-bbda-8bcaa9c30c31",
+      "name": "Baserow3",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        800
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "2cd16d2a-2c93-4f23-87f4-17b53b7ed523",
+      "name": "SplitInBatches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "852d89e6-c8e8-4e76-a5c5-723aeb66e9b9",
+      "name": "SplitInBatches1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "databaseId": 46836,
+        "tableId": 118237,
+        "limit": 1,
+        "additionalOptions": {
+          "search": "={{ $json[\"code\"] }}"
+        }
+      },
+      "id": "bc78ba59-afeb-4c66-a604-f8f680df1fe6",
+      "name": "Baserow4",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        1060
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 46836,
+        "tableId": 118237,
+        "rowId": "={{ $json[\"id\"] }}",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 753162,
+              "fieldValue": "={{ $node[\"SplitInBatches1\"].json[\"id\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "8ace6dd0-bbbe-4044-bdfb-9d6f734d6567",
+      "name": "Baserow2",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        1060
+      ],
+      "credentials": {
+        "baserowApi": {
+          "id": "3",
+          "name": "Baserow account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {},
+      "id": "e6ed2a50-638c-4c6e-a7bb-5df97f473ac6",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        300,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 500,
+        "options": {}
+      },
+      "id": "1c076114-f692-4043-a4e1-61ced163c073",
+      "name": "SplitInBatches2",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        580
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2022-12-01T03:19:54.931Z",
+      "updatedAt": "2022-12-01T03:19:54.931Z",
+      "id": "1",
+      "name": "ROSA SELVAGEM 🌷"
+    },
+    {
+      "createdAt": "2022-12-01T03:20:57.770Z",
+      "updatedAt": "2022-12-01T03:20:57.770Z",
+      "id": "4",
+      "name": "ROBÔS 🤖"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2022-12-01T03:25:58.000Z",
+  "versionId": "9e576bb6-daf8-4e01-88eb-bb4d06b63e6d"
+}
